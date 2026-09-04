@@ -1,0 +1,266 @@
+import { useState } from 'react'
+
+const CREATORS = [
+  {
+    id: 'c1',
+    name: 'Devansh Tech',
+    handle: '@devanshtech',
+    stats: '1.4M Subscribers',
+    category: 'Consumer Tech',
+    avatar: 'DT',
+    ring: 1,
+    angle: 30,
+    accent: '#ff5500',
+    video: {
+      id: 'creator-devansh',
+      title: 'Devansh Tech — Ultimate Flagship Smartphone Teardown',
+      category: 'YouTube Long-Form Edit',
+      duration: '12:40',
+      creator: 'Devansh Tech (1.4M Subs)',
+      stats: '1.2M Views · 68% Avg Retention',
+      bgGradient: 'radial-gradient(circle at 40% 40%, #ff5500, #090a0c 75%)',
+      description: 'Retention-engineered pacing with custom sound cues, kinetic 3D B-roll overlays, and color grade.',
+    },
+  },
+  {
+    id: 'c2',
+    name: 'Kavya Money',
+    handle: '@kavyagrows',
+    stats: '820K Followers',
+    category: 'Finance & Investing',
+    avatar: 'KM',
+    ring: 2,
+    angle: 110,
+    accent: '#ffffff',
+    video: {
+      id: 'creator-kavya',
+      title: 'Kavya Money — 3 Tax Secrets the Rich Use',
+      category: 'Viral Finance Reel',
+      duration: '0:55',
+      creator: 'Kavya Money (820K Followers)',
+      stats: '4.8M Views · 140K Shares',
+      bgGradient: 'radial-gradient(circle at 50% 50%, #ff7700, #0c0d10 80%)',
+      description: 'High-tempo talking head cut with animated infographics, pop-in charts, and sound design.',
+    },
+  },
+  {
+    id: 'c3',
+    name: 'The Fitness Protocol',
+    handle: '@fitnessprotocol',
+    stats: '650K Community',
+    category: 'Health & Athletics',
+    avatar: 'FP',
+    ring: 1,
+    angle: 210,
+    accent: '#ff5500',
+    video: {
+      id: 'creator-fitness',
+      title: 'The Fitness Protocol — 90-Day Full Physique Transformation',
+      category: 'Short-Form UGC & Edit',
+      duration: '0:45',
+      creator: 'The Fitness Protocol (650K Community)',
+      stats: '3.1M Views · 22K Saves',
+      bgGradient: 'radial-gradient(circle at 60% 30%, #20242b, #000000 85%)',
+      description: 'Dynamic workout pacing, bass drops synced to reps, and kinetic motivational subtitles.',
+    },
+  },
+  {
+    id: 'c4',
+    name: 'Samar Explores',
+    handle: '@samarexplores',
+    stats: '2.1M Across Platforms',
+    category: 'Travel & Documentary',
+    avatar: 'SE',
+    ring: 2,
+    angle: 290,
+    accent: '#ffffff',
+    video: {
+      id: 'creator-samar',
+      title: 'Samar Explores — Hidden Valleys of Spiti (4K Drone Cut)',
+      category: '4K Cinematic Travel Cut',
+      duration: '2:15',
+      creator: 'Samar Explores (2.1M Community)',
+      stats: '2.4M Views · 4K 60FPS',
+      bgGradient: 'radial-gradient(circle at 30% 60%, #ff5500, #090a0c 75%)',
+      description: 'Ultra-wide cinematic drone color grade, ambient spatial wind soundscapes, and orchestral score timing.',
+    },
+  },
+]
+
+export default function CreatorsOrbit({ onPlayVideo }) {
+  const [isPaused, setIsPaused] = useState(false)
+
+  return (
+    <section id="creators-orbit" className="py-24 md:py-32 bg-[#0c0d10] border-t border-white/8 relative overflow-hidden">
+      {/* Background Grid Pattern */}
+      <div className="absolute inset-0 bg-grid-dark opacity-30 pointer-events-none" />
+
+      <div className="container relative z-10">
+        {/* Centered Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#181a20] border border-white/10 shadow-sm mb-5">
+            <span className="w-2 h-2 rounded-full bg-[#ff5500] animate-ping" />
+            <span className="text-xs font-semibold uppercase tracking-widest text-white/90">
+              02 · Top Creators in Orbit
+            </span>
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold tracking-tight leading-[1.1]">
+            <span className="font-playfair italic font-normal">Top Creators We</span>{' '}
+            <span>Edit & Build For</span>
+          </h2>
+
+          <p className="mt-4 text-base md:text-lg text-[#9ca3af] max-w-xl mx-auto leading-relaxed">
+            Click any orbiting creator node to immediately watch the high-retention YouTube episode or viral Reel we edited for them.
+          </p>
+        </div>
+
+        {/* Orbit Canvas & Creator Cards Grid */}
+        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-14 items-center">
+          {/* Orbit System Container */}
+          <div
+            className={`relative aspect-square max-w-[520px] mx-auto w-full flex items-center justify-center p-4 rounded-3xl border border-white/10 bg-[#111317]/80 backdrop-blur-xl shadow-2xl ${
+              isPaused ? 'orbit-paused' : ''
+            }`}
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            {/* Center Core */}
+            <div className="relative z-20 w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-black text-white flex flex-col items-center justify-center text-center shadow-2xl border-4 border-[#ff5500] group">
+              <div className="absolute inset-0 rounded-full bg-[#ff5500]/30 animate-ping pointer-events-none" />
+              <span className="font-playfair text-base sm:text-lg font-bold text-white group-hover:text-[#ff5500] transition-colors leading-tight">
+                CREATOR<br />HUB
+              </span>
+              <span className="text-[9px] uppercase tracking-wider text-[#ff5500] font-semibold mt-0.5">
+                Click to Watch ▶
+              </span>
+            </div>
+
+            {/* Orbit Ring 1 (Inner Track) */}
+            <div className="absolute w-[240px] h-[240px] sm:w-[280px] sm:h-[280px] rounded-full border border-dashed border-white/20 pointer-events-none animate-orbit-1">
+              {CREATORS.filter((c) => c.ring === 1).map((c, i) => (
+                <CreatorNode
+                  key={c.id}
+                  creator={c}
+                  index={i}
+                  total={CREATORS.filter((item) => item.ring === 1).length}
+                  counterClass="counter-orbit-1"
+                  onClick={() => onPlayVideo(c.video)}
+                />
+              ))}
+            </div>
+
+            {/* Orbit Ring 2 (Outer Track) */}
+            <div className="absolute w-[370px] h-[370px] sm:w-[440px] sm:h-[440px] rounded-full border border-dashed border-[#ff5500]/40 pointer-events-none animate-orbit-2">
+              {CREATORS.filter((c) => c.ring === 2).map((c, i) => (
+                <CreatorNode
+                  key={c.id}
+                  creator={c}
+                  index={i}
+                  total={CREATORS.filter((item) => item.ring === 2).length}
+                  counterClass="counter-orbit-2"
+                  onClick={() => onPlayVideo(c.video)}
+                />
+              ))}
+            </div>
+
+            {/* Live Orbit Status Indicator */}
+            <div className="absolute bottom-4 right-4 z-20 px-3 py-1 bg-black/80 backdrop-blur-md rounded-full border border-white/10 text-[11px] font-medium text-[#9ca3af]">
+              {isPaused ? '⏸ Orbit Paused · Click avatar to watch' : '⚡ Live Orbit · Click avatar to play'}
+            </div>
+          </div>
+
+          {/* Creator Direct Access Cards */}
+          <div className="w-full">
+            {/* Clean Sub-header with Proper Spacing */}
+            <div className="flex items-center justify-between mb-5 pb-3 border-b border-white/10">
+              <span className="text-xs font-bold uppercase tracking-wider text-white/90 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#ff5500]" />
+                Partnered Channels & Edits
+              </span>
+              <span className="text-[11px] text-[#6b7280] font-medium">Click card to watch ▶</span>
+            </div>
+
+            {/* Cards List */}
+            <div className="space-y-3.5">
+              {CREATORS.map((c) => (
+                <div
+                  key={c.id}
+                  onClick={() => onPlayVideo(c.video)}
+                  className="liquid-card p-4 sm:p-4.5 bg-[#121418]/90 border-white/10 hover:border-[#ff5500]/60 flex items-center justify-between gap-4 cursor-pointer group transition-all"
+                >
+                  <div className="flex items-center gap-3.5">
+                    <div
+                      className="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-xs shadow-md shrink-0 group-hover:scale-105 transition-transform"
+                      style={{
+                        backgroundColor: c.accent === '#ff5500' ? '#ff5500' : '#ffffff',
+                        color: c.accent === '#ff5500' ? '#ffffff' : '#000000',
+                      }}
+                    >
+                      {c.avatar}
+                    </div>
+                    <div>
+                      <h3 className="font-playfair text-base sm:text-lg font-bold text-white group-hover:text-[#ff5500] transition-colors">
+                        {c.name}
+                      </h3>
+                      <p className="text-xs text-[#9ca3af]">{c.handle} · {c.category}</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3 shrink-0">
+                    <span className="hidden sm:inline-block text-xs font-semibold px-2.5 py-1 rounded-full bg-[#ff5500]/15 text-[#ff5500] border border-[#ff5500]/30">
+                      {c.stats}
+                    </span>
+                    <span className="w-7 h-7 rounded-full bg-white text-black flex items-center justify-center text-xs group-hover:bg-[#ff5500] group-hover:text-white transition-colors shadow-md">
+                      ▶
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function CreatorNode({ creator, index, total, counterClass, onClick }) {
+  const angle = (360 / total) * index + (creator.angle || 0)
+  const rad = (angle * Math.PI) / 180
+  const left = 50 + 50 * Math.cos(rad)
+  const top = 50 + 50 * Math.sin(rad)
+
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        left: `${left}%`,
+        top: `${top}%`,
+        transform: 'translate(-50%, -50%)',
+      }}
+      className="pointer-events-auto"
+    >
+      <div className={counterClass}>
+        <button
+          onClick={onClick}
+          className="relative group rounded-full p-2 transition-all duration-300 flex items-center justify-center focus-ring hover:scale-125 hover:ring-4 hover:ring-[#ff5500] shadow-2xl cursor-pointer"
+          style={{
+            backgroundColor: creator.accent === '#ff5500' ? '#ff5500' : '#ffffff',
+            color: creator.accent === '#ff5500' ? '#ffffff' : '#000000',
+            width: '46px',
+            height: '46px',
+          }}
+          title={`Click to watch ${creator.name} edit`}
+        >
+          <span className="text-xs font-bold leading-none">{creator.avatar}</span>
+
+          {/* Tooltip */}
+          <div className="absolute -bottom-7 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black border border-white/20 text-white text-[10px] font-semibold px-2.5 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-xl flex items-center gap-1 z-30">
+            <span>▶ Watch {creator.name}</span>
+          </div>
+        </button>
+      </div>
+    </div>
+  )
+}

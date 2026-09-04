@@ -1,0 +1,281 @@
+@import "tailwindcss";
+
+:root {
+  /* Strict 3-Color Dark Luxury Palette */
+  --bg-dark: #08090b;
+  --bg-surface: #0f1115;
+  --bg-surface-elevated: #16181e;
+  
+  --text-white: #ffffff;
+  --text-muted: #9496a1;
+  --text-subtle: #5f636e;
+  
+  --accent-orange: #ff5500;
+  --accent-orange-hover: #e64c00;
+  --accent-orange-glow: rgba(255, 85, 0, 0.35);
+  --accent-orange-subtle: rgba(255, 85, 0, 0.12);
+
+  --border-dark-subtle: rgba(255, 255, 255, 0.08);
+  --border-dark-medium: rgba(255, 255, 255, 0.14);
+  --border-orange: rgba(255, 85, 0, 0.45);
+
+  --glass-dark-bg: rgba(15, 17, 21, 0.85);
+  --glass-dark-border: rgba(255, 255, 255, 0.09);
+  --glass-dark-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Typography styles */
+.font-playfair, .font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-display {
+  font-family: 'Clash Display', 'Plus Jakarta Sans', -apple-system, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+h1, h2, h3, h4, .display {
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  color: var(--text-white);
+  margin: 0;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--accent-orange);
+  color: #ffffff;
+}
+
+/* Goo Filter Container */
+.goo {
+  filter: url(#goo);
+}
+
+/* Dark Liquid Glass Cards */
+.liquid-card {
+  background: var(--glass-dark-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-dark-border);
+  border-radius: 20px;
+  box-shadow: var(--glass-dark-shadow);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.liquid-card:hover {
+  border-color: var(--border-orange);
+  box-shadow: 0 24px 50px -10px rgba(255, 85, 0, 0.22), 0 0 0 1px rgba(255, 85, 0, 0.3);
+}
+
+/* Liquid Primary Button */
+.liquid-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--accent-orange);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  box-shadow: 0 8px 25px -4px var(--accent-orange-glow);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.liquid-btn-primary:hover {
+  background-color: var(--accent-orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px 0px var(--accent-orange-glow);
+}
+
+/* Liquid Secondary Button */
+.liquid-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  border: 1px solid var(--border-dark-medium);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.liquid-btn-secondary:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--accent-orange);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* Dark Form inputs */
+.field-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-dark-subtle);
+  border-radius: 12px;
+  padding: 14px 18px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.field-input::placeholder {
+  color: #5f636e;
+}
+
+.field-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--accent-orange);
+  box-shadow: 0 0 0 4px var(--accent-orange-subtle);
+}
+
+/* VERTICAL Marquee Animations */
+@keyframes marquee-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marquee-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-marquee-up {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  animation: marquee-up 32s linear infinite;
+}
+
+.animate-marquee-down {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  animation: marquee-down 36s linear infinite;
+}
+
+.animate-marquee-up:hover,
+.animate-marquee-down:hover {
+  animation-play-state: paused;
+}
+
+/* Orbit Rotations */
+@keyframes orbit-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-counter-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.animate-orbit-1 {
+  animation: orbit-spin 38s linear infinite;
+}
+
+.animate-orbit-2 {
+  animation: orbit-spin 55s linear infinite reverse;
+}
+
+.counter-orbit-1 {
+  animation: orbit-counter-spin 38s linear infinite;
+}
+
+.counter-orbit-2 {
+  animation: orbit-counter-spin 55s linear infinite reverse;
+}
+
+.orbit-paused,
+.orbit-paused * {
+  animation-play-state: paused !important;
+}
+
+/* Dark subtle grid and dot patterns */
+.bg-grid-dark {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+
+.bg-dots-dark {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
+}
