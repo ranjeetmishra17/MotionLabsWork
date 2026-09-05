@@ -23,7 +23,7 @@ export default function App() {
       duration: '01:15',
       creator: 'Motion Labs Production',
       stats: '150+ Projects Across 2025–2026',
-      bgGradient: 'radial-gradient(circle at 40% 40%, #ff5500, #090a0c 80%)',
+      bgGradient: 'radial-gradient(circle at 40% 40%, #556b2f, #19220e 80%)',
       description:
         'A comprehensive showcase of high-retention video edits, commercial shoots, 3D product animations, and brand launches produced by Motion Labs.',
     })
@@ -34,11 +34,11 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#08090b] text-white selection:bg-[#ff5500] selection:text-white">
+    <div className="min-h-screen bg-[#fbfcf9] text-[#151813] selection:bg-[#556b2f] selection:text-white">
       {/* SVG Gooey Liquid Filter System */}
       <GooFilters />
 
-      {/* Dark Liquid Navigation Bar */}
+      {/* Light Liquid Navigation Bar */}
       <Navbar onOpenShowreel={handleOpenShowreel} />
 
       {/* Main Experience Flow */}

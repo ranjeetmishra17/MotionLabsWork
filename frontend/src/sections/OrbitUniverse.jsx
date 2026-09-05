@@ -15,7 +15,7 @@ const TESTIMONIALS_NODES = [
       'We used to wait two weeks for a single edit. Motion Labs turns around a full week of high-retention Reels before our next shoot is even scheduled. Our CAC dropped 38%.',
     ring: 1, // inner ring
     angle: 0,
-    accent: '#ff5500',
+    accent: '#556b2f',
   },
   {
     id: 't2',
@@ -29,7 +29,7 @@ const TESTIMONIALS_NODES = [
       'The launch film Motion Labs produced for our electric bike was pure cinema. It set our pre-order record within the first 48 hours of posting.',
     ring: 2, // middle ring
     angle: 120,
-    accent: '#000000',
+    accent: '#151813',
   },
   {
     id: 't3',
@@ -43,7 +43,7 @@ const TESTIMONIALS_NODES = [
       'They rebuilt our content engine from scratch. The aesthetic is clean, modern, and our Instagram engagement rate jumped from 1.2% to 6.8%.',
     ring: 3, // outer ring
     angle: 240,
-    accent: '#ff5500',
+    accent: '#556b2f',
   },
   {
     id: 't4',
@@ -57,7 +57,7 @@ const TESTIMONIALS_NODES = [
       'They rebuilt our site in three weeks with zero page-builder bloat, and it finally loads as fast as it looks. Best technical production partner we have had.',
     ring: 2,
     angle: 300,
-    accent: '#000000',
+    accent: '#151813',
   },
 ]
 
@@ -74,7 +74,7 @@ const CREATORS_NODES = [
     bio: 'Long-form weekly tech reviews and smartphone breakdowns with cinematic B-roll and kinetic motion graphics.',
     ring: 1,
     angle: 60,
-    accent: '#ff5500',
+    accent: '#556b2f',
   },
   {
     id: 'c2',
@@ -87,7 +87,7 @@ const CREATORS_NODES = [
     bio: 'High-retention talking head finance reels with bespoke animated charts, sound effects, and 70%+ completion rates.',
     ring: 2,
     angle: 180,
-    accent: '#000000',
+    accent: '#151813',
   },
   {
     id: 'c3',
@@ -100,7 +100,7 @@ const CREATORS_NODES = [
     bio: 'Dynamic workout transformations and podcast cutdowns with synchronized typography.',
     ring: 3,
     angle: 330,
-    accent: '#ff5500',
+    accent: '#556b2f',
   },
   {
     id: 'c4',
@@ -113,7 +113,7 @@ const CREATORS_NODES = [
     bio: 'Cinematic 4K travel vignettes, drone grading, and immersive audio masterclasses.',
     ring: 1,
     angle: 220,
-    accent: '#000000',
+    accent: '#151813',
   },
 ]
 
@@ -129,7 +129,7 @@ const BRANDS_NODES = [
     tagline: 'Premium organic clinical skincare brand.',
     ring: 1,
     angle: 150,
-    accent: '#ff5500',
+    accent: '#556b2f',
   },
   {
     id: 'b2',
@@ -141,7 +141,7 @@ const BRANDS_NODES = [
     tagline: 'Urban electric commuter mobility ecosystem.',
     ring: 2,
     angle: 40,
-    accent: '#000000',
+    accent: '#151813',
   },
   {
     id: 'b3',
@@ -153,7 +153,7 @@ const BRANDS_NODES = [
     tagline: 'Single-origin craft roasted coffees.',
     ring: 3,
     angle: 130,
-    accent: '#ff5500',
+    accent: '#556b2f',
   },
   {
     id: 'b4',
@@ -165,7 +165,7 @@ const BRANDS_NODES = [
     tagline: 'Next-generation AI workflow automation.',
     ring: 3,
     angle: 20,
-    accent: '#000000',
+    accent: '#151813',
   },
 ]
 
@@ -185,30 +185,30 @@ export default function OrbitUniverse() {
   const visibleNodes = getVisibleNodes()
 
   return (
-    <section id="orbit" className="py-24 md:py-32 bg-white relative overflow-hidden">
+    <section id="orbit" className="py-24 md:py-32 bg-[#fbfcf9] relative overflow-hidden">
       {/* Subtle Background Elements */}
       <div className="absolute inset-0 bg-dots-light opacity-60 pointer-events-none" />
 
       <div className="container relative z-10">
         {/* Header (Centered) */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f6f6f8] border border-black/10 shadow-sm mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#ff5500] animate-ping" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-black">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-black/10 shadow-sm mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#556b2f] animate-ping" />
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#151813]">
               Interactive Orbit Universe
             </span>
           </div>
 
-          <h2 className="display text-3xl sm:text-4xl md:text-5xl text-black">
+          <h2 className="display text-3xl sm:text-4xl md:text-5xl text-[#151813]">
             The Brands, Creators & Voices in Our Orbit.
           </h2>
 
-          <p className="mt-4 text-base text-[#4a4a52]">
+          <p className="mt-4 text-base text-[#565e53]">
             Explore our ecosystem of category-leading brands, top creators, and client reviews rotating in live planetary orbit.
           </p>
 
           {/* Interactive Filter Pills */}
-          <div className="mt-8 inline-flex flex-wrap items-center justify-center gap-2 p-1.5 bg-[#f6f6f8] border border-black/10 rounded-full shadow-inner">
+          <div className="mt-8 inline-flex flex-wrap items-center justify-center gap-2 p-1.5 bg-[#f4f6f0] border border-black/8 rounded-full shadow-inner">
             {[
               { id: 'all', label: '🌌 All Orbit' },
               { id: 'testimonials', label: '⭐ Testimonials' },
@@ -220,8 +220,8 @@ export default function OrbitUniverse() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-5 py-2 rounded-full text-xs font-semibold transition-all focus-ring ${
                   activeTab === tab.id
-                    ? 'bg-black text-white shadow-md'
-                    : 'text-[#4a4a52] hover:text-black hover:bg-white/60'
+                    ? 'bg-[#151813] text-white shadow-md'
+                    : 'text-[#565e53] hover:text-[#151813] hover:bg-white/60'
                 }`}
               >
                 {tab.label}
@@ -234,19 +234,19 @@ export default function OrbitUniverse() {
         <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
           {/* Orbit System Container */}
           <div
-            className={`relative aspect-square max-w-[580px] mx-auto w-full flex items-center justify-center p-4 rounded-3xl border border-black/8 bg-[#fbfbfc]/80 backdrop-blur-sm shadow-xl ${
+            className={`relative aspect-square max-w-[580px] mx-auto w-full flex items-center justify-center p-4 rounded-3xl border border-black/8 bg-white/90 backdrop-blur-sm shadow-xl ${
               isPaused ? 'orbit-paused' : ''
             }`}
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
             {/* Center Core: Motion Labs Sun */}
-            <div className="relative z-20 w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-black text-white flex flex-col items-center justify-center text-center shadow-2xl border-4 border-white cursor-pointer group">
-              <div className="absolute inset-0 rounded-full bg-[#ff5500]/30 animate-ping opacity-60 pointer-events-none" />
-              <span className="display text-base sm:text-lg font-bold text-white group-hover:text-[#ff5500] transition-colors leading-tight">
+            <div className="relative z-20 w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-[#151813] text-white flex flex-col items-center justify-center text-center shadow-2xl border-4 border-[#556b2f]/30 cursor-pointer group">
+              <div className="absolute inset-0 rounded-full bg-[#556b2f]/30 animate-ping opacity-60 pointer-events-none" />
+              <span className="display text-base sm:text-lg font-bold text-white group-hover:text-[#556b2f] transition-colors leading-tight">
                 MOTION<br />LABS
               </span>
-              <span className="text-[9px] uppercase tracking-wider text-[#ff5500] font-semibold mt-0.5">
+              <span className="text-[9px] uppercase tracking-wider text-[#556b2f] font-semibold mt-0.5">
                 Studio Core
               </span>
             </div>
@@ -269,7 +269,7 @@ export default function OrbitUniverse() {
             </div>
 
             {/* Orbit Ring 2 (Middle Track) */}
-            <div className="absolute w-[340px] h-[340px] sm:w-[410px] sm:h-[410px] rounded-full border border-dashed border-[#ff5500]/30 pointer-events-none animate-orbit-2">
+            <div className="absolute w-[340px] h-[340px] sm:w-[410px] sm:h-[410px] rounded-full border border-dashed border-[#556b2f]/30 pointer-events-none animate-orbit-2">
               {visibleNodes
                 .filter((n) => n.ring === 2)
                 .map((node, i) => (
@@ -303,7 +303,7 @@ export default function OrbitUniverse() {
             </div>
 
             {/* Orbit Speed & Interaction Helper Overlay */}
-            <div className="absolute bottom-4 right-4 z-20 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full border border-black/10 text-[11px] font-medium text-[#7b7b85] shadow-sm">
+            <div className="absolute bottom-4 right-4 z-20 px-3 py-1 bg-white/95 backdrop-blur-md rounded-full border border-black/10 text-[11px] font-medium text-[#565e53] shadow-sm">
               {isPaused ? '⏸ Orbit Paused (Click node to inspect)' : '🔄 Rotating (Hover to freeze)'}
             </div>
           </div>
@@ -318,25 +318,25 @@ export default function OrbitUniverse() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                  className="liquid-card p-6 sm:p-8 relative overflow-hidden bg-white/95 border-black/10 shadow-2xl"
+                  className="liquid-card p-6 sm:p-8 relative overflow-hidden bg-white/95 border-black/8 shadow-xl"
                 >
-                  {/* Subtle Orange Glow Corner */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff5500]/10 rounded-full blur-2xl pointer-events-none" />
+                  {/* Subtle Olive Glow Corner */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#556b2f]/10 rounded-full blur-2xl pointer-events-none" />
 
                   {/* Badge & Type */}
                   <div className="flex items-center justify-between gap-4 mb-6">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black text-white text-xs font-semibold uppercase tracking-wider">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#151813] text-white text-xs font-semibold uppercase tracking-wider">
                       {selectedNode.type === 'testimonial' && '⭐ Verified Client Testimonial'}
                       {selectedNode.type === 'creator' && '🎬 Partnered Creator'}
                       {selectedNode.type === 'brand' && '🏢 Featured Brand'}
                     </span>
                     {selectedNode.stat && (
-                      <span className="text-xs font-bold text-[#ff5500] px-3 py-1 rounded-full bg-[#fff2eb] border border-[#ff5500]/20">
+                      <span className="text-xs font-bold text-[#556b2f] px-3 py-1 rounded-full bg-[#556b2f]/10 border border-[#556b2f]/20">
                         {selectedNode.stat}
                       </span>
                     )}
                     {selectedNode.stats && (
-                      <span className="text-xs font-bold text-[#ff5500] px-3 py-1 rounded-full bg-[#fff2eb] border border-[#ff5500]/20">
+                      <span className="text-xs font-bold text-[#556b2f] px-3 py-1 rounded-full bg-[#556b2f]/10 border border-[#556b2f]/20">
                         {selectedNode.stats}
                       </span>
                     )}
@@ -344,19 +344,19 @@ export default function OrbitUniverse() {
 
                   {/* Quote or Bio Content */}
                   {selectedNode.quote && (
-                    <blockquote className="display text-xl sm:text-2xl text-black leading-snug mb-6">
+                    <blockquote className="display text-xl sm:text-2xl text-[#151813] leading-snug mb-6">
                       "{selectedNode.quote}"
                     </blockquote>
                   )}
 
                   {selectedNode.bio && (
-                    <p className="text-base text-[#4a4a52] leading-relaxed mb-6">
+                    <p className="text-base text-[#565e53] leading-relaxed mb-6">
                       {selectedNode.bio}
                     </p>
                   )}
 
                   {selectedNode.tagline && (
-                    <p className="display text-xl text-black leading-relaxed mb-6">
+                    <p className="display text-xl text-[#151813] leading-relaxed mb-6">
                       "{selectedNode.tagline}"
                     </p>
                   )}
@@ -367,15 +367,15 @@ export default function OrbitUniverse() {
                       <div
                         className="w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm shadow-md"
                         style={{
-                          backgroundColor: selectedNode.accent === '#ff5500' ? '#ff5500' : '#000000',
+                          backgroundColor: selectedNode.accent === '#556b2f' ? '#556b2f' : '#151813',
                           color: '#ffffff',
                         }}
                       >
                         {selectedNode.avatar}
                       </div>
                       <div>
-                        <h4 className="display text-lg text-black">{selectedNode.name}</h4>
-                        <p className="text-xs text-[#7b7b85] font-medium">
+                        <h4 className="display text-lg text-[#151813]">{selectedNode.name}</h4>
+                        <p className="text-xs text-[#565e53] font-medium">
                           {selectedNode.role ? `${selectedNode.role} · ${selectedNode.org}` : selectedNode.handle || selectedNode.category}
                         </p>
                       </div>
@@ -394,7 +394,7 @@ export default function OrbitUniverse() {
 
             {/* Quick Node Selector Pills */}
             <div className="mt-6 flex flex-wrap gap-2">
-              <span className="text-xs font-semibold text-[#7b7b85] py-1.5 self-center">
+              <span className="text-xs font-semibold text-[#565e53] py-1.5 self-center">
                 Quick Select:
               </span>
               {visibleNodes.slice(0, 5).map((n) => (
@@ -403,8 +403,8 @@ export default function OrbitUniverse() {
                   onClick={() => setSelectedNode(n)}
                   className={`text-xs px-3 py-1.5 rounded-full border transition-all ${
                     selectedNode?.id === n.id
-                      ? 'border-[#ff5500] bg-[#fff2eb] text-[#ff5500] font-bold shadow-sm'
-                      : 'border-black/10 bg-white text-[#4a4a52] hover:border-black'
+                      ? 'border-[#556b2f] bg-[#556b2f]/10 text-[#556b2f] font-bold shadow-sm'
+                      : 'border-black/10 bg-white text-[#565e53] hover:border-black'
                   }`}
                 >
                   {n.name}
@@ -442,11 +442,11 @@ function OrbitNode({ node, index, total, counterClass, isSelected, onSelect }) {
           onClick={onSelect}
           className={`relative group rounded-full p-1.5 transition-all duration-300 flex items-center justify-center focus-ring ${
             isSelected
-              ? 'scale-125 ring-4 ring-[#ff5500] shadow-lg'
+              ? 'scale-125 ring-4 ring-[#556b2f] shadow-lg'
               : 'hover:scale-115 hover:ring-2 hover:ring-black'
           }`}
           style={{
-            backgroundColor: node.accent === '#ff5500' ? '#ff5500' : '#000000',
+            backgroundColor: node.accent === '#556b2f' ? '#556b2f' : '#151813',
             color: '#ffffff',
             width: '42px',
             height: '42px',
@@ -456,7 +456,7 @@ function OrbitNode({ node, index, total, counterClass, isSelected, onSelect }) {
           <span className="text-xs font-bold leading-none">{node.avatar}</span>
 
           {/* Mini tooltip indicator */}
-          <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[10px] font-semibold px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md">
+          <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#151813] text-white text-[10px] font-semibold px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md">
             {node.name}
           </div>
         </button>

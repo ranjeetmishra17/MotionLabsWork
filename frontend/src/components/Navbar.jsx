@@ -22,33 +22,33 @@ export default function Navbar({ onOpenShowreel }) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[#08090b]/90 backdrop-blur-xl border-b border-white/10 py-3.5 shadow-2xl'
+          ? 'bg-[#fbfcf9]/90 backdrop-blur-xl border-b border-black/8 py-3.5 shadow-md'
           : 'bg-transparent py-5'
       }`}
     >
       <nav className="container flex items-center justify-between">
         {/* Brand Logo */}
         <a href="#top" className="flex items-center gap-2.5 group focus-ring">
-          <div className="w-8 h-8 rounded-xl bg-white text-black flex items-center justify-center font-bold text-sm shadow-md group-hover:bg-[#ff5500] group-hover:text-white transition-colors">
+          <div className="w-8 h-8 rounded-xl bg-[#556b2f] text-white flex items-center justify-center font-bold text-sm shadow-md group-hover:bg-[#435523] transition-colors">
             M
           </div>
           <div className="flex flex-col">
-            <span className="display text-lg font-bold tracking-tight text-white leading-none">
+            <span className="display text-lg font-bold tracking-tight text-[#151813] leading-none">
               Motion Labs
             </span>
-            <span className="text-[10px] uppercase font-semibold text-[#9496a1] tracking-widest mt-0.5">
+            <span className="text-[10px] uppercase font-semibold text-[#565e53] tracking-widest mt-0.5">
               Production Studio
             </span>
           </div>
         </a>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex items-center gap-7 text-sm font-medium text-[#9496a1]">
+        <ul className="hidden md:flex items-center gap-7 text-sm font-medium text-[#565e53]">
           {LINKS.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className="hover:text-white transition-colors focus-ring py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#ff5500] hover:after:w-full after:transition-all after:duration-300"
+                className="hover:text-[#151813] transition-colors focus-ring py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#556b2f] hover:after:w-full after:transition-all after:duration-300"
               >
                 {l.label}
               </a>
@@ -61,7 +61,7 @@ export default function Navbar({ onOpenShowreel }) {
           {onOpenShowreel && (
             <button
               onClick={onOpenShowreel}
-              className="text-xs font-semibold px-4 py-2 rounded-full border border-white/15 hover:border-white text-white bg-white/5 transition-all focus-ring cursor-pointer"
+              className="text-xs font-semibold px-4 py-2 rounded-full border border-black/10 hover:border-[#556b2f] text-[#151813] bg-black/4 transition-all focus-ring cursor-pointer"
             >
               ▶ 2026 Reel
             </button>
@@ -76,40 +76,40 @@ export default function Navbar({ onOpenShowreel }) {
 
         {/* Mobile Hamburger / Toggle */}
         <button
-          className="md:hidden flex items-center gap-2 text-xs font-semibold border border-white/15 bg-[#14161b]/90 backdrop-blur-md rounded-full px-3.5 py-1.5 text-white active:scale-95 transition-transform focus-ring"
+          className="md:hidden flex items-center gap-2 text-xs font-semibold border border-black/10 bg-white/95 backdrop-blur-md rounded-full px-3.5 py-1.5 text-[#151813] shadow-sm active:scale-95 transition-transform focus-ring"
           onClick={() => setOpen((o) => !o)}
           aria-expanded={open}
           aria-label="Toggle navigation menu"
         >
-          <span className="w-2 h-2 rounded-full bg-[#ff5500]" />
+          <span className="w-2 h-2 rounded-full bg-[#556b2f]" />
           <span>{open ? '✕ Close' : 'Menu ☰'}</span>
         </button>
       </nav>
 
       {/* Mobile Menu Drawer */}
       {open && (
-        <div className="md:hidden bg-[#0a0b0e]/98 backdrop-blur-2xl border-b border-white/10 shadow-2xl animate-in fade-in slide-in-from-top-4 duration-200">
-          <ul className="container py-6 flex flex-col gap-3 text-base font-medium text-white">
+        <div className="md:hidden bg-white/98 backdrop-blur-2xl border-b border-black/10 shadow-2xl animate-in fade-in slide-in-from-top-4 duration-200">
+          <ul className="container py-6 flex flex-col gap-3 text-base font-medium text-[#151813]">
             {LINKS.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-between py-2.5 px-3 rounded-xl hover:bg-white/5 hover:text-[#ff5500] transition-colors focus-ring"
+                  className="flex items-center justify-between py-2.5 px-3 rounded-xl hover:bg-black/5 hover:text-[#556b2f] transition-colors focus-ring"
                 >
                   <span>{l.label}</span>
-                  <span className="text-xs text-[#5f636e]">→</span>
+                  <span className="text-xs text-[#7d8778]">→</span>
                 </a>
               </li>
             ))}
-            <li className="pt-3 border-t border-white/10 flex flex-col gap-2.5">
+            <li className="pt-3 border-t border-black/10 flex flex-col gap-2.5">
               {onOpenShowreel && (
                 <button
                   onClick={() => {
                     setOpen(false)
                     onOpenShowreel()
                   }}
-                  className="w-full text-center py-3 text-sm font-semibold rounded-full border border-white/20 text-white bg-white/5 hover:bg-white/10 transition-colors"
+                  className="w-full text-center py-3 text-sm font-semibold rounded-full border border-black/15 text-[#151813] bg-black/4 hover:bg-black/8 transition-colors"
                 >
                   ▶ Watch 2026 Showreel
                 </button>

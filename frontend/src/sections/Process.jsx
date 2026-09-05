@@ -27,20 +27,20 @@ const STEPS = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-24 md:py-32 bg-[#fafafa] border-t border-black/8 relative">
+    <section id="process" className="py-24 md:py-32 bg-[#fbfcf9] border-t border-black/8 relative">
       <div className="container">
         {/* Header */}
         <div className="max-w-2xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-black/10 shadow-sm mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#ff5500]" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-black">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-black/8 shadow-sm mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#556b2f]" />
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#151813]">
               Production Velocity
             </span>
           </div>
-          <h2 className="display text-3xl sm:text-4xl md:text-5xl text-black">
+          <h2 className="display text-3xl sm:text-4xl md:text-5xl text-[#151813]">
             Four Steps from Concept to Viral Delivery.
           </h2>
-          <p className="mt-4 text-base text-[#4a4a52]">
+          <p className="mt-4 text-base text-[#565e53]">
             A frictionless workflow designed for fast-moving founders and creators. No bureaucratic agency delays.
           </p>
         </div>
@@ -50,22 +50,22 @@ export default function Process() {
           {STEPS.map((s) => (
             <div
               key={s.n}
-              className="liquid-card p-6 sm:p-8 bg-white flex flex-col justify-between hover:translate-y-[-4px] transition-transform duration-300"
+              className="liquid-card p-6 sm:p-8 bg-white flex flex-col justify-between hover:translate-y-[-4px] transition-transform duration-300 border-black/8"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <span className="display text-2xl font-bold text-[#ff5500] font-mono">
+                  <span className="display text-2xl font-bold text-[#556b2f] font-mono">
                     {s.n}
                   </span>
-                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-[#f6f6f8] text-black border border-black/8">
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-black/5 text-[#151813] border border-black/8">
                     {s.metric}
                   </span>
                 </div>
-                <h3 className="display text-xl text-black mb-3">{s.title}</h3>
-                <p className="text-[#4a4a52] text-sm leading-relaxed">{s.text}</p>
+                <h3 className="display text-xl text-[#151813] mb-3">{s.title}</h3>
+                <p className="text-[#565e53] text-sm leading-relaxed">{s.text}</p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-black/5 flex items-center gap-2 text-xs font-semibold text-[#ff5500]">
+              <div className="mt-6 pt-4 border-t border-black/5 flex items-center gap-2 text-xs font-semibold text-[#556b2f]">
                 <span>Phase {s.n} Guaranteed</span>
                 <span>→</span>
               </div>

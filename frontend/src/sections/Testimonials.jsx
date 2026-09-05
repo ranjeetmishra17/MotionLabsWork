@@ -52,26 +52,26 @@ export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0)
 
   return (
-    <section id="testimonials" className="py-24 md:py-32 bg-[#090a0c] border-t border-white/8 relative overflow-hidden">
+    <section id="testimonials" className="py-24 md:py-32 bg-[#fbfcf9] border-t border-black/8 relative overflow-hidden">
       {/* Background Subtle Dot Matrix */}
-      <div className="absolute inset-0 bg-dots-dark opacity-40 pointer-events-none" />
+      <div className="absolute inset-0 bg-dots-dark opacity-50 pointer-events-none" />
 
       <div className="container relative z-10">
         {/* Centered Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#181a20] border border-white/10 shadow-sm mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#ff5500]" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-white/90">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-black/8 shadow-sm mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#556b2f]" />
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#151813]">
               Client Testimonials & Outcomes
             </span>
           </div>
 
-          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold tracking-tight leading-[1.15] mx-auto max-w-3xl">
+          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] font-bold tracking-tight leading-[1.15] mx-auto max-w-3xl">
             <span className="font-playfair italic font-normal">What Founders &</span>{' '}
             <span className="font-bold">Leaders Say.</span>
           </h2>
 
-          <p className="mt-4 text-base md:text-lg text-[#9ca3af] max-w-xl mx-auto leading-relaxed text-center">
+          <p className="mt-4 text-base md:text-lg text-[#565e53] max-w-xl mx-auto leading-relaxed text-center">
             Real feedback and verified business outcomes from the founders and creators we partner with.
           </p>
         </div>
@@ -85,34 +85,34 @@ export default function Testimonials() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="liquid-card p-8 sm:p-12 bg-[#121418]/90 border-white/10 shadow-2xl relative"
+              className="liquid-card p-8 sm:p-12 bg-white/95 border-black/8 shadow-xl relative"
             >
-              {/* Subtle Orange Flare */}
-              <div className="absolute top-0 right-0 w-40 h-40 bg-[#ff5500]/10 rounded-full blur-3xl pointer-events-none" />
+              {/* Subtle Olive Flare */}
+              <div className="absolute top-0 right-0 w-40 h-40 bg-[#556b2f]/10 rounded-full blur-3xl pointer-events-none" />
 
               <div className="flex items-center justify-between gap-4 mb-8">
-                <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#ff5500] text-white">
+                <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#556b2f] text-white shadow-sm">
                   {REVIEWS[activeIndex].tag}
                 </span>
-                <span className="text-xs font-bold text-[#ff5500] px-3.5 py-1 rounded-full bg-[#ff5500]/15 border border-[#ff5500]/30">
+                <span className="text-xs font-bold text-[#556b2f] px-3.5 py-1 rounded-full bg-[#556b2f]/12 border border-[#556b2f]/25">
                   {REVIEWS[activeIndex].stat}
                 </span>
               </div>
 
-              <blockquote className="font-playfair text-2xl sm:text-3xl md:text-4xl text-white leading-snug font-normal mb-10">
+              <blockquote className="font-playfair text-2xl sm:text-3xl md:text-4xl text-[#151813] leading-snug font-normal mb-10">
                 "{REVIEWS[activeIndex].quote}"
               </blockquote>
 
-              <div className="flex items-center justify-between border-t border-white/10 pt-6 flex-wrap gap-4">
+              <div className="flex items-center justify-between border-t border-black/8 pt-6 flex-wrap gap-4">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#ff5500] text-white flex items-center justify-center font-bold text-sm shadow-md">
+                  <div className="w-12 h-12 rounded-full bg-[#556b2f] text-white flex items-center justify-center font-bold text-sm shadow-sm">
                     {REVIEWS[activeIndex].avatar}
                   </div>
                   <div>
-                    <h3 className="font-playfair text-xl font-bold text-white">
+                    <h3 className="font-playfair text-xl font-bold text-[#151813]">
                       {REVIEWS[activeIndex].name}
                     </h3>
-                    <p className="text-xs text-[#9ca3af]">
+                    <p className="text-xs text-[#565e53]">
                       {REVIEWS[activeIndex].role} · {REVIEWS[activeIndex].company}
                     </p>
                   </div>
@@ -125,8 +125,8 @@ export default function Testimonials() {
                       onClick={() => setActiveIndex(i)}
                       className={`w-3 h-3 rounded-full transition-all focus-ring ${
                         activeIndex === i
-                          ? 'bg-[#ff5500] w-8'
-                          : 'bg-white/20 hover:bg-white/40'
+                          ? 'bg-[#556b2f] w-8'
+                          : 'bg-black/15 hover:bg-black/30'
                       }`}
                       aria-label={`View testimonial ${i + 1}`}
                     />
@@ -145,15 +145,15 @@ export default function Testimonials() {
               onClick={() => setActiveIndex(i)}
               className={`p-5 rounded-2xl border text-left transition-all cursor-pointer focus-ring ${
                 activeIndex === i
-                  ? 'bg-[#181a20] border-[#ff5500] shadow-lg ring-1 ring-[#ff5500]/30'
-                  : 'bg-[#111317]/50 border-white/8 hover:bg-[#14161b] hover:border-white/20'
+                  ? 'bg-white border-[#556b2f] shadow-lg ring-1 ring-[#556b2f]/30'
+                  : 'bg-white/70 border-black/8 hover:bg-white hover:border-black/15'
               }`}
             >
               <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-bold text-white">{r.name}</span>
-                <span className="text-[10px] text-[#ff5500] font-bold">{r.stat}</span>
+                <span className="text-xs font-bold text-[#151813]">{r.name}</span>
+                <span className="text-[10px] text-[#556b2f] font-bold">{r.stat}</span>
               </div>
-              <p className="text-xs text-[#9ca3af] line-clamp-2">
+              <p className="text-xs text-[#565e53] line-clamp-2">
                 "{r.quote}"
               </p>
             </button>

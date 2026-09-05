@@ -56,21 +56,21 @@ export default function Services() {
   const [open, setOpen] = useState(0)
 
   return (
-    <section id="services" className="py-24 md:py-32 bg-[#090a0c] border-t border-white/8 relative">
+    <section id="services" className="py-24 md:py-32 bg-[#fbfcf9] border-t border-black/8 relative">
       <div className="container">
         {/* Centered Header for Mobile and Desktop */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#181a20] border border-white/10 shadow-sm mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#ff5500]" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-white/90">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-black/8 shadow-sm mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#556b2f]" />
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#151813]">
               Studio Capabilities
             </span>
           </div>
-          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold tracking-tight leading-[1.15] mx-auto max-w-3xl">
+          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] font-bold tracking-tight leading-[1.15] mx-auto max-w-3xl">
             <span className="font-playfair italic font-normal">Six Specialized Disciplines.</span>{' '}
             <span className="font-bold">One Team.</span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#9496a1] leading-relaxed max-w-xl mx-auto text-center">
+          <p className="mt-4 text-base sm:text-lg text-[#565e53] leading-relaxed max-w-xl mx-auto text-center">
             From initial creative concept and shoot direction to retention edit and web launch, we handle everything under one roof.
           </p>
         </div>
@@ -84,8 +84,8 @@ export default function Services() {
                 key={s.name}
                 className={`liquid-card transition-all duration-300 overflow-hidden ${
                   isOpen
-                    ? 'border-[#ff5500]/50 bg-[#14161b] shadow-xl ring-1 ring-[#ff5500]/20'
-                    : 'bg-[#0f1115]/70 hover:bg-[#14161b]'
+                    ? 'border-[#556b2f]/60 bg-white shadow-xl ring-1 ring-[#556b2f]/20'
+                    : 'bg-white/70 hover:bg-white border-black/6'
                 }`}
               >
                 <button
@@ -94,12 +94,12 @@ export default function Services() {
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-center gap-5 sm:gap-8">
-                    <span className="text-base sm:text-lg text-[#ff5500] font-mono font-bold">
+                    <span className="text-base sm:text-lg text-[#556b2f] font-mono font-bold">
                       {s.n}
                     </span>
                     <span
                       className={`font-playfair text-lg sm:text-xl md:text-2xl transition-colors font-bold ${
-                        isOpen ? 'text-white' : 'text-[#9496a1]'
+                        isOpen ? 'text-[#151813]' : 'text-[#565e53]'
                       }`}
                     >
                       {s.name}
@@ -107,14 +107,14 @@ export default function Services() {
                   </div>
 
                   <div className="flex items-center gap-4 shrink-0">
-                    <span className="hidden sm:inline-block text-xs font-bold px-3 py-1 rounded-full bg-[#ff5500]/15 text-[#ff5500] border border-[#ff5500]/30">
+                    <span className="hidden sm:inline-block text-xs font-bold px-3 py-1 rounded-full bg-[#556b2f]/12 text-[#556b2f] border border-[#556b2f]/25">
                       {s.metric}
                     </span>
                     <span
                       className={`w-8 h-8 rounded-full border flex items-center justify-center text-sm font-bold transition-all ${
                         isOpen
-                          ? 'bg-[#ff5500] text-white border-[#ff5500]'
-                          : 'border-white/20 text-white hover:border-white'
+                          ? 'bg-[#556b2f] text-white border-[#556b2f]'
+                          : 'border-black/15 text-[#151813] hover:border-[#556b2f]'
                       }`}
                     >
                       {isOpen ? '−' : '+'}
@@ -131,15 +131,15 @@ export default function Services() {
                       transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 pb-8 sm:px-8 sm:pb-8 pt-0 grid md:grid-cols-[1.2fr_0.8fr] gap-6 items-end border-t border-white/8 mt-2 pt-6">
-                        <p className="text-sm sm:text-base text-[#9496a1] leading-relaxed">
+                      <div className="px-6 pb-8 sm:px-8 sm:pb-8 pt-0 grid md:grid-cols-[1.2fr_0.8fr] gap-6 items-end border-t border-black/8 mt-2 pt-6">
+                        <p className="text-sm sm:text-base text-[#565e53] leading-relaxed">
                           {s.blurb}
                         </p>
                         <div className="flex flex-wrap gap-2 md:justify-end">
                           {s.tags.map((t) => (
                             <span
                               key={t}
-                              className="text-xs font-medium px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/90"
+                              className="text-xs font-medium px-3 py-1 rounded-full bg-black/4 border border-black/8 text-[#151813]"
                             >
                               {t}
                             </span>

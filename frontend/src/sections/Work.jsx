@@ -7,7 +7,7 @@ const PROJECTS = [
     category: 'Product Cinematography · UGC Ads',
     stats: '4.2x ROAS · 3.4M Views',
     client: 'Nocturne Skincare',
-    thumb: 'radial-gradient(circle at center, #ff5500, #0a0a0a 75%)',
+    thumb: 'radial-gradient(circle at center, #556b2f, #0a0a0a 75%)',
     filterTag: 'video',
   },
   {
@@ -23,7 +23,7 @@ const PROJECTS = [
     category: 'SMM · Creator Shoots',
     stats: '+180K Community · 6.8% Engagement',
     client: 'Baseline Coffee Co.',
-    thumb: 'radial-gradient(circle at center, #ff6600, #111111 80%)',
+    thumb: 'radial-gradient(circle at center, #68823b, #111111 80%)',
     filterTag: 'smm',
   },
   {
@@ -46,24 +46,24 @@ export default function Work({ onSelectVideo }) {
       : PROJECTS.filter((p) => p.filterTag === activeFilter)
 
   return (
-    <section id="work" className="py-24 md:py-32 bg-white border-t border-black/8 relative">
+    <section id="work" className="py-24 md:py-32 bg-[#fbfcf9] border-t border-black/8 relative">
       <div className="container">
         {/* Header & Category Filters */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div className="max-w-xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f6f6f8] border border-black/10 shadow-sm mb-4">
-              <span className="w-2 h-2 rounded-full bg-[#ff5500]" />
-              <span className="text-xs font-semibold uppercase tracking-widest text-black">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-black/8 shadow-sm mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#556b2f]" />
+              <span className="text-xs font-semibold uppercase tracking-widest text-[#151813]">
                 Featured Case Studies
               </span>
             </div>
-            <h2 className="display text-3xl sm:text-4xl md:text-5xl text-black">
+            <h2 className="display text-3xl sm:text-4xl md:text-5xl text-[#151813]">
               Shipped Work That Generated Real ROI.
             </h2>
           </div>
 
           {/* Filter Pills */}
-          <div className="flex flex-wrap gap-2 p-1.5 bg-[#f6f6f8] border border-black/10 rounded-full w-fit">
+          <div className="flex flex-wrap gap-2 p-1.5 bg-black/4 border border-black/8 rounded-full w-fit">
             {[
               { id: 'all', label: 'All Projects' },
               { id: 'video', label: 'Video & Film' },
@@ -75,8 +75,8 @@ export default function Work({ onSelectVideo }) {
                 onClick={() => setActiveFilter(f.id)}
                 className={`text-xs font-semibold px-4 py-2 rounded-full transition-all focus-ring ${
                   activeFilter === f.id
-                    ? 'bg-black text-white shadow-md'
-                    : 'text-[#4a4a52] hover:text-black hover:bg-white/60'
+                    ? 'bg-[#556b2f] text-white shadow-sm'
+                    : 'text-[#565e53] hover:text-[#151813] hover:bg-white'
                 }`}
               >
                 {f.label}
@@ -122,7 +122,7 @@ export default function Work({ onSelectVideo }) {
                 <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-xs font-bold text-black shadow-md">
                   {p.client}
                 </span>
-                <span className="px-3 py-1 rounded-full bg-[#ff5500] text-xs font-bold text-white shadow-md">
+                <span className="px-3 py-1 rounded-full bg-[#556b2f] text-xs font-bold text-white shadow-md">
                   {p.stats}
                 </span>
               </div>
@@ -131,7 +131,7 @@ export default function Work({ onSelectVideo }) {
               <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
                 <div
                   className={`w-16 h-16 rounded-full bg-white text-black flex items-center justify-center shadow-2xl transition-all duration-300 ${
-                    hovered === i ? 'scale-100 opacity-100 bg-[#ff5500] text-white' : 'scale-50 opacity-0'
+                    hovered === i ? 'scale-100 opacity-100 bg-[#556b2f] text-white' : 'scale-50 opacity-0'
                   }`}
                 >
                   <span className="text-xl ml-0.5">▶</span>
@@ -140,7 +140,7 @@ export default function Work({ onSelectVideo }) {
 
               {/* Bottom Content Bar */}
               <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-8 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10">
-                <p className="text-xs font-semibold text-[#ff5500] uppercase tracking-wider mb-2">
+                <p className="text-xs font-semibold text-[#8db152] uppercase tracking-wider mb-2">
                   {p.category}
                 </p>
                 <h3 className="display text-2xl sm:text-3xl text-white group-hover:text-white/95 transition-colors">

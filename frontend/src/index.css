@@ -1,27 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  /* Strict 3-Color Dark Luxury Palette */
-  --bg-dark: #08090b;
-  --bg-surface: #0f1115;
-  --bg-surface-elevated: #16181e;
+  /* Editorial Light Luxury Palette with Olive Green */
+  --bg-dark: #fbfcf9;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #f2f5ed;
   
-  --text-white: #ffffff;
-  --text-muted: #9496a1;
-  --text-subtle: #5f636e;
+  --text-white: #151813;
+  --text-muted: #565e53;
+  --text-subtle: #7d8778;
   
-  --accent-orange: #ff5500;
-  --accent-orange-hover: #e64c00;
-  --accent-orange-glow: rgba(255, 85, 0, 0.35);
-  --accent-orange-subtle: rgba(255, 85, 0, 0.12);
+  --accent-orange: #556b2f;
+  --accent-orange-hover: #435523;
+  --accent-orange-glow: rgba(85, 107, 47, 0.28);
+  --accent-orange-subtle: rgba(85, 107, 47, 0.12);
 
-  --border-dark-subtle: rgba(255, 255, 255, 0.08);
-  --border-dark-medium: rgba(255, 255, 255, 0.14);
-  --border-orange: rgba(255, 85, 0, 0.45);
+  --border-dark-subtle: rgba(0, 0, 0, 0.08);
+  --border-dark-medium: rgba(0, 0, 0, 0.14);
+  --border-orange: rgba(85, 107, 47, 0.45);
 
-  --glass-dark-bg: rgba(15, 17, 21, 0.85);
-  --glass-dark-border: rgba(255, 255, 255, 0.09);
-  --glass-dark-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  --glass-dark-bg: rgba(255, 255, 255, 0.88);
+  --glass-dark-border: rgba(0, 0, 0, 0.08);
+  --glass-dark-shadow: 0 20px 40px -15px rgba(25, 35, 16, 0.07), 0 0 0 1px rgba(0, 0, 0, 0.04);
 }
 
 * {
@@ -82,7 +82,7 @@ a {
   filter: url(#goo);
 }
 
-/* Dark Liquid Glass Cards */
+/* Light Liquid Glass Cards */
 .liquid-card {
   background: var(--glass-dark-bg);
   backdrop-filter: blur(24px);
@@ -95,7 +95,7 @@ a {
 
 .liquid-card:hover {
   border-color: var(--border-orange);
-  box-shadow: 0 24px 50px -10px rgba(255, 85, 0, 0.22), 0 0 0 1px rgba(255, 85, 0, 0.3);
+  box-shadow: 0 20px 45px -10px rgba(85, 107, 47, 0.18), 0 0 0 1px rgba(85, 107, 47, 0.25);
 }
 
 /* Liquid Primary Button */
@@ -128,22 +128,22 @@ a {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background-color: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.04);
+  color: var(--text-white);
   font-weight: 600;
   font-size: 0.95rem;
   padding: 14px 28px;
   border-radius: 9999px;
   border: 1px solid var(--border-dark-medium);
   backdrop-filter: blur(12px);
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.05);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
 }
 
 .liquid-btn-secondary:hover {
-  border-color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent-orange);
+  background-color: rgba(85, 107, 47, 0.08);
   transform: translateY(-2px);
 }
 
@@ -159,26 +159,26 @@ a {
   padding: 0 28px;
 }
 
-/* Dark Form inputs */
+/* Light Form inputs */
 .field-input {
   width: 100%;
-  background: rgba(255, 255, 255, 0.03);
+  background: #ffffff;
   border: 1px solid var(--border-dark-subtle);
   border-radius: 12px;
   padding: 14px 18px;
-  color: #ffffff;
+  color: var(--text-white);
   font-family: inherit;
   font-size: 0.95rem;
   transition: all 0.25s ease;
 }
 
 .field-input::placeholder {
-  color: #5f636e;
+  color: var(--text-subtle);
 }
 
 .field-input:focus {
   outline: none;
-  background: rgba(255, 255, 255, 0.06);
+  background: #ffffff;
   border-color: var(--accent-orange);
   box-shadow: 0 0 0 4px var(--accent-orange-subtle);
 }
@@ -261,16 +261,16 @@ a {
   animation-play-state: paused !important;
 }
 
-/* Dark subtle grid and dot patterns */
+/* Light subtle grid and dot patterns */
 .bg-grid-dark {
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
 }
 
 .bg-dots-dark {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
