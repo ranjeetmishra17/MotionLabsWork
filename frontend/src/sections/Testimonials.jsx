@@ -95,7 +95,7 @@ export default function Testimonials() {
                 </span>
               </div>
 
-              <blockquote className="font-playfair text-2xl sm:text-3xl md:text-4xl text-[#151813] leading-snug font-normal mb-10">
+              <blockquote className="font-sans text-xl sm:text-2xl md:text-3xl text-[#151813] leading-snug font-medium tracking-tight mb-10">
                 "{REVIEWS[activeIndex].quote}"
               </blockquote>
 
@@ -105,7 +105,7 @@ export default function Testimonials() {
                     {REVIEWS[activeIndex].avatar}
                   </div>
                   <div>
-                    <h3 className="font-playfair text-xl font-bold text-[#151813]">
+                    <h3 className="font-sans text-lg font-bold text-[#151813]">
                       {REVIEWS[activeIndex].name}
                     </h3>
                     <p className="text-xs text-[#565e53]">

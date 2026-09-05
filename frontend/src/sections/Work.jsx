@@ -144,7 +144,7 @@ export default function Work({ onSelectVideo }) {
                 <p className="text-xs font-semibold text-[#8db152] uppercase tracking-wider mb-2">
                   {p.category}
                 </p>
-                <h3 className="font-playfair text-2xl sm:text-3xl text-white font-bold group-hover:text-white/95 transition-colors">
+                <h3 className="font-sans text-2xl sm:text-3xl text-white font-bold tracking-tight group-hover:text-white/95 transition-colors">
                   {p.title}
                 </h3>
               </div>

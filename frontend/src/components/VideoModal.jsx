@@ -116,7 +116,7 @@ export default function VideoModal({ video, onClose }) {
               <div className="text-xs text-[#556b2f] font-bold uppercase tracking-wider mb-1">
                 {video.creator}
               </div>
-              <h3 className="font-playfair text-2xl md:text-3xl text-[#151813] font-bold mb-2">
+              <h3 className="font-sans text-2xl md:text-3xl text-[#151813] font-bold tracking-tight mb-2">
                 {video.title}
               </h3>
               <p className="text-sm text-[#565e53] max-w-xl leading-relaxed">

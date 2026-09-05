@@ -124,7 +124,7 @@ export default function CreatorsOrbit({ onPlayVideo }) {
             {/* Center Core */}
             <div className="relative z-20 w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-[#151813] text-white flex flex-col items-center justify-center text-center shadow-2xl border-2 sm:border-4 border-[#556b2f] group">
               <div className="absolute inset-0 rounded-full bg-[#556b2f]/30 animate-ping pointer-events-none" />
-              <span className="font-playfair text-xs sm:text-base md:text-lg font-bold text-white group-hover:text-[#8db152] transition-colors leading-tight">
+              <span className="font-sans text-xs sm:text-base md:text-lg font-bold tracking-tight text-white group-hover:text-[#8db152] transition-colors leading-tight">
                 CREATOR<br />HUB
               </span>
               <span className="text-[8px] sm:text-[9px] uppercase tracking-wider text-[#8db152] font-semibold mt-0.5">
@@ -196,7 +196,7 @@ export default function CreatorsOrbit({ onPlayVideo }) {
                       {c.avatar}
                     </div>
                     <div>
-                      <h3 className="font-playfair text-base sm:text-lg font-bold text-[#151813] group-hover:text-[#556b2f] transition-colors">
+                      <h3 className="font-sans text-base sm:text-lg font-bold text-[#151813] group-hover:text-[#556b2f] transition-colors">
                         {c.name}
                       </h3>
                       <p className="text-xs text-[#565e53]">{c.handle} · {c.category}</p>

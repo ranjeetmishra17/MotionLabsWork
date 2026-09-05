@@ -95,7 +95,7 @@ export default function Services() {
                       {s.n}
                     </span>
                     <span
-                      className={`font-playfair text-lg sm:text-xl md:text-2xl transition-colors font-bold ${
+                      className={`font-sans text-lg sm:text-xl md:text-2xl transition-colors font-semibold tracking-tight ${
                         isOpen ? 'text-[#151813]' : 'text-[#565e53]'
                       }`}
                     >

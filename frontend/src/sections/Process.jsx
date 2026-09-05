@@ -59,7 +59,7 @@ export default function Process() {
                     {s.metric}
                   </span>
                 </div>
-                <h3 className="font-playfair text-xl text-[#151813] font-bold mb-3">{s.title}</h3>
+                <h3 className="font-sans text-xl text-[#151813] font-bold mb-3">{s.title}</h3>
                 <p className="text-[#565e53] text-sm leading-relaxed">{s.text}</p>
               </div>
 
