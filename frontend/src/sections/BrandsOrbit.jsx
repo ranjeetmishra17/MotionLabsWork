@@ -107,23 +107,23 @@ export default function BrandsOrbit({ onPlayVideo }) {
   const [isPaused, setIsPaused] = useState(false)
 
   return (
-    <section id="brands-orbit" className="py-24 md:py-32 bg-[#fbfcf9] relative overflow-hidden">
+    <section id="clients" className="py-24 md:py-32 bg-[#fbfcf9] relative overflow-hidden">
       {/* Background Dots */}
       <div className="absolute inset-0 bg-dots-dark opacity-50 pointer-events-none" />
 
       <div className="container relative z-10">
         {/* Centered Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-black/8 shadow-sm mb-5">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full liquid-glass-pill mb-5">
             <span className="w-2 h-2 rounded-full bg-[#556b2f] animate-ping" />
             <span className="text-xs font-semibold uppercase tracking-widest text-[#151813]">
               01 · Top Brands in Orbit
             </span>
           </div>
 
-          <h2 className="font-playfair text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] tracking-tight leading-[1.15] mx-auto max-w-3xl font-normal">
-            <span className="italic">Brands We Have</span>{' '}
-            <span className="font-semibold">Scaled & Produced</span>
+          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] font-bold tracking-tight leading-[1.15] mx-auto max-w-3xl">
+            <span>Brands We Have</span>{' '}
+            <span className="font-playfair italic font-normal text-[#556b2f]">Scaled & Produced.</span>
           </h2>
         </div>
 
@@ -131,7 +131,7 @@ export default function BrandsOrbit({ onPlayVideo }) {
         <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-14 items-center">
           {/* Orbit System Container */}
           <div
-            className={`relative aspect-square max-w-[340px] sm:max-w-[440px] md:max-w-[520px] mx-auto w-full flex items-center justify-center p-3 sm:p-4 rounded-3xl border border-black/8 bg-white/90 backdrop-blur-xl shadow-xl ${
+            className={`relative aspect-square max-w-[340px] sm:max-w-[440px] md:max-w-[520px] mx-auto w-full flex items-center justify-center p-3 sm:p-4 rounded-3xl liquid-card ${
               isPaused ? 'orbit-paused' : ''
             }`}
             onMouseEnter={() => setIsPaused(true)}
@@ -199,7 +199,7 @@ export default function BrandsOrbit({ onPlayVideo }) {
                 <div
                   key={b.id}
                   onClick={() => onPlayVideo(b.video)}
-                  className="liquid-card p-4 sm:p-4.5 bg-white/95 border-black/8 hover:border-[#556b2f]/60 flex items-center justify-between gap-4 cursor-pointer group transition-all"
+                  className="liquid-card p-4 sm:p-4.5 flex items-center justify-between gap-4 cursor-pointer group"
                 >
                   <div className="flex items-center gap-3.5">
                     <div
@@ -256,12 +256,10 @@ function BrandNode({ brand, index, total, counterClass, onClick }) {
       <div className={counterClass}>
         <button
           onClick={onClick}
-          className="relative group rounded-full p-2 transition-all duration-300 flex items-center justify-center focus-ring hover:scale-125 hover:ring-4 hover:ring-[#556b2f] shadow-md cursor-pointer"
+          className="relative group rounded-full transition-all duration-300 flex items-center justify-center focus-ring hover:scale-125 hover:ring-4 hover:ring-[#556b2f] shadow-md cursor-pointer w-9 h-9 sm:w-[46px] sm:h-[46px]"
           style={{
             backgroundColor: brand.accent === '#556b2f' ? '#556b2f' : '#151813',
             color: '#ffffff',
-            width: '46px',
-            height: '46px',
           }}
           title={`Click to play ${brand.name} video`}
         >

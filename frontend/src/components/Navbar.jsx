@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react'
 
 const LINKS = [
-  { label: 'Reels', href: '#videos' },
-  { label: 'Services', href: '#services' },
-  { label: 'Top Brands', href: '#brands-orbit' },
-  { label: 'Top Creators', href: '#creators-orbit' },
+  { label: 'Portfolio', href: '#portfolio' },
+  { label: 'Clients', href: '#clients' },
   { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Contact', href: '#contact' },
 ]
 
-export default function Navbar({ onOpenShowreel }) {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
 
@@ -22,18 +21,18 @@ export default function Navbar({ onOpenShowreel }) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[#fbfcf9]/90 backdrop-blur-xl border-b border-black/8 py-3.5 shadow-md'
+          ? 'bg-white/80 backdrop-blur-2xl border-b border-white/80 py-3 shadow-lg shadow-black/[0.03]'
           : 'bg-transparent py-5'
       }`}
     >
       <nav className="container flex items-center justify-between">
         {/* Brand Logo */}
         <a href="#top" className="flex items-center gap-2.5 group focus-ring">
-          <div className="w-8 h-8 rounded-xl bg-[#556b2f] text-white flex items-center justify-center font-bold text-sm shadow-md group-hover:bg-[#435523] transition-colors">
-            M
+          <div className="w-8 h-8 rounded-xl bg-[#11140e] text-white flex items-center justify-center font-bold text-sm shadow-md border border-black/20 group-hover:border-[#556b2f] transition-all">
+            <span className="group-hover:text-[#8db152] transition-colors">M</span>
           </div>
           <div className="flex flex-col">
-            <span className="display text-lg font-bold tracking-tight text-[#151813] leading-none">
+            <span className="display text-lg font-bold tracking-tight text-[#11140e] leading-none">
               Motion Labs
             </span>
             <span className="text-[10px] uppercase font-semibold text-[#565e53] tracking-widest mt-0.5">
@@ -42,8 +41,8 @@ export default function Navbar({ onOpenShowreel }) {
           </div>
         </a>
 
-        {/* Desktop Links */}
-        <ul className="hidden md:flex items-center gap-7 text-sm font-medium text-[#565e53]">
+        {/* Desktop & Tablet Links */}
+        <ul className="hidden md:flex items-center gap-5 lg:gap-7 text-sm font-medium text-[#565e53]">
           {LINKS.map((l) => (
             <li key={l.href}>
               <a
@@ -56,19 +55,11 @@ export default function Navbar({ onOpenShowreel }) {
           ))}
         </ul>
 
-        {/* Right CTA Actions */}
-        <div className="hidden md:flex items-center gap-3">
-          {onOpenShowreel && (
-            <button
-              onClick={onOpenShowreel}
-              className="text-xs font-semibold px-4 py-2 rounded-full border border-black/10 hover:border-[#556b2f] text-[#151813] bg-black/4 transition-all focus-ring cursor-pointer"
-            >
-              ▶ 2026 Reel
-            </button>
-          )}
+        {/* Right Actions */}
+        <div className="hidden md:flex items-center gap-2.5">
           <a
             href="#contact"
-            className="liquid-btn-primary text-xs font-semibold px-5 py-2.5 focus-ring"
+            className="liquid-btn-primary text-xs font-semibold px-4 lg:px-5 py-2.5 focus-ring"
           >
             Start a Project →
           </a>
@@ -76,7 +67,7 @@ export default function Navbar({ onOpenShowreel }) {
 
         {/* Mobile Hamburger / Toggle */}
         <button
-          className="md:hidden flex items-center gap-2 text-xs font-semibold border border-black/10 bg-white/95 backdrop-blur-md rounded-full px-3.5 py-1.5 text-[#151813] shadow-sm active:scale-95 transition-transform focus-ring"
+          className="md:hidden flex items-center gap-2 text-xs font-semibold liquid-glass-pill rounded-full px-3.5 py-1.5 text-[#151813] active:scale-95 transition-transform focus-ring cursor-pointer"
           onClick={() => setOpen((o) => !o)}
           aria-expanded={open}
           aria-label="Toggle navigation menu"
@@ -88,7 +79,7 @@ export default function Navbar({ onOpenShowreel }) {
 
       {/* Mobile Menu Drawer */}
       {open && (
-        <div className="md:hidden bg-white/98 backdrop-blur-2xl border-b border-black/10 shadow-2xl animate-in fade-in slide-in-from-top-4 duration-200">
+        <div className="md:hidden bg-white/95 backdrop-blur-2xl border-b border-white/80 shadow-2xl animate-in fade-in slide-in-from-top-4 duration-200">
           <ul className="container py-6 flex flex-col gap-3 text-base font-medium text-[#151813]">
             {LINKS.map((l) => (
               <li key={l.href}>
@@ -102,18 +93,8 @@ export default function Navbar({ onOpenShowreel }) {
                 </a>
               </li>
             ))}
-            <li className="pt-3 border-t border-black/10 flex flex-col gap-2.5">
-              {onOpenShowreel && (
-                <button
-                  onClick={() => {
-                    setOpen(false)
-                    onOpenShowreel()
-                  }}
-                  className="w-full text-center py-3 text-sm font-semibold rounded-full border border-black/15 text-[#151813] bg-black/4 hover:bg-black/8 transition-colors"
-                >
-                  ▶ Watch 2026 Showreel
-                </button>
-              )}
+
+            <li className="pt-3 border-t border-black/8 flex flex-col gap-2.5">
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}

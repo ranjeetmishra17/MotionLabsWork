@@ -133,7 +133,7 @@ export default function MovingVideos({ onSelectVideo }) {
   const [isPaused, setIsPaused] = useState(false)
 
   return (
-    <section id="videos" className="py-24 md:py-32 bg-[#f4f6f0] border-y border-black/8 overflow-hidden relative">
+    <section id="portfolio" className="py-24 md:py-32 bg-[#f4f6f0] border-y border-black/8 overflow-hidden relative">
       {/* Background Grid Pattern */}
       <div className="absolute inset-0 bg-grid-dark opacity-35 pointer-events-none" />
 
@@ -141,25 +141,25 @@ export default function MovingVideos({ onSelectVideo }) {
       <div className="container relative z-10 mb-12 md:mb-16">
         <div className="text-center max-w-3xl mx-auto flex flex-col items-center">
           {/* Centered Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-black/8 shadow-sm mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full liquid-glass-pill mb-4">
             <span className="w-2 h-2 rounded-full bg-[#556b2f] animate-pulse" />
             <span className="text-xs font-semibold uppercase tracking-widest text-[#151813]">
               Vertical Video Grid
             </span>
           </div>
 
-          <h2 className="font-playfair text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] tracking-tight leading-[1.15] mx-auto max-w-3xl font-normal">
-            <span className="italic">Reels & Edits in</span>{' '}
-            <span className="font-semibold">Constant Motion.</span>
+          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] font-bold tracking-tight leading-[1.15] mx-auto max-w-3xl">
+            <span>Reels & Edits in</span>{' '}
+            <span className="font-playfair italic font-normal text-[#556b2f]">Constant Motion.</span>
           </h2>
 
           {/* Centered Pause / Motion Control */}
           <div className="mt-8">
             <button
               onClick={() => setIsPaused(!isPaused)}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white hover:bg-[#ebefe5] border border-black/10 text-xs font-medium text-[#151813] transition-all shadow-sm focus-ring cursor-pointer group"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full liquid-glass-pill text-xs font-medium text-[#151813] transition-all focus-ring cursor-pointer group"
             >
-              <span className={`w-2 h-2 rounded-full ${isPaused ? 'bg-amber-600' : 'bg-[#556b2f] animate-pulse'}`} />
+              <span className={`w-2 h-2 rounded-full ${isPaused ? 'bg-[#151813]' : 'bg-[#556b2f] animate-pulse'}`} />
               <span className="font-semibold">{isPaused ? '▶ Resume Motion' : '❚❚ Pause All'}</span>
               <span className="text-[#7d8778] text-[10px] sm:text-[11px] font-normal border-l border-black/10 pl-2 group-hover:text-[#565e53] transition-colors hidden xs:inline">
                 Tap reel to play 4K

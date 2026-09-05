@@ -59,16 +59,16 @@ export default function Testimonials() {
       <div className="container relative z-10">
         {/* Centered Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-black/8 shadow-sm mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full liquid-glass-pill mb-4">
             <span className="w-2 h-2 rounded-full bg-[#556b2f]" />
             <span className="text-xs font-semibold uppercase tracking-widest text-[#151813]">
               Client Testimonials & Outcomes
             </span>
           </div>
 
-          <h2 className="font-playfair text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] tracking-tight leading-[1.15] mx-auto max-w-3xl font-normal">
-            <span className="italic">What Founders &</span>{' '}
-            <span className="font-semibold">Leaders Say.</span>
+          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] font-bold tracking-tight leading-[1.15] mx-auto max-w-3xl">
+            <span>What Founders &</span>{' '}
+            <span className="font-playfair italic font-normal text-[#556b2f]">Leaders Say.</span>
           </h2>
         </div>
 
@@ -81,47 +81,48 @@ export default function Testimonials() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="liquid-card p-8 sm:p-12 bg-white/95 border-black/8 shadow-xl relative"
+              className="liquid-card p-8 sm:p-12 shadow-2xl relative"
             >
               {/* Subtle Olive Flare */}
               <div className="absolute top-0 right-0 w-40 h-40 bg-[#556b2f]/10 rounded-full blur-3xl pointer-events-none" />
 
               <div className="flex items-center justify-between gap-4 mb-8">
-                <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#556b2f] text-white shadow-sm">
+                <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#11140e] text-white shadow-sm">
                   {REVIEWS[activeIndex].tag}
                 </span>
-                <span className="text-xs font-bold text-[#556b2f] px-3.5 py-1 rounded-full bg-[#556b2f]/12 border border-[#556b2f]/25">
+                <span className="text-xs font-bold text-[#11140e] px-3.5 py-1 rounded-full bg-black/5 border border-black/15">
                   {REVIEWS[activeIndex].stat}
                 </span>
               </div>
 
-              <blockquote className="font-sans text-xl sm:text-2xl md:text-3xl text-[#151813] leading-snug font-medium tracking-tight mb-10">
+              <blockquote className="text-lg sm:text-2xl text-[#11140e] font-medium leading-relaxed mb-8 italic">
                 "{REVIEWS[activeIndex].quote}"
               </blockquote>
 
-              <div className="flex items-center justify-between border-t border-black/8 pt-6 flex-wrap gap-4">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#556b2f] text-white flex items-center justify-center font-bold text-sm shadow-sm">
+              <div className="flex items-center justify-between gap-4 border-t border-black/8 pt-6">
+                <div className="flex items-center gap-3.5">
+                  <div className="w-11 h-11 rounded-xl bg-[#11140e] text-white font-bold text-sm flex items-center justify-center shadow-md border border-black/20">
                     {REVIEWS[activeIndex].avatar}
                   </div>
                   <div>
-                    <h3 className="font-sans text-lg font-bold text-[#151813]">
+                    <h3 className="font-sans font-bold text-[#11140e] text-base">
                       {REVIEWS[activeIndex].name}
                     </h3>
                     <p className="text-xs text-[#565e53]">
-                      {REVIEWS[activeIndex].role} · {REVIEWS[activeIndex].company}
+                      {REVIEWS[activeIndex].role}, {REVIEWS[activeIndex].company}
                     </p>
                   </div>
                 </div>
 
+                {/* Navigation Dots */}
                 <div className="flex items-center gap-2">
                   {REVIEWS.map((_, i) => (
                     <button
                       key={i}
                       onClick={() => setActiveIndex(i)}
-                      className={`w-3 h-3 rounded-full transition-all focus-ring ${
+                      className={`w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${
                         activeIndex === i
-                          ? 'bg-[#556b2f] w-8'
+                          ? 'w-8 bg-[#11140e]'
                           : 'bg-black/15 hover:bg-black/30'
                       }`}
                       aria-label={`View testimonial ${i + 1}`}
@@ -139,10 +140,10 @@ export default function Testimonials() {
             <button
               key={r.id}
               onClick={() => setActiveIndex(i)}
-              className={`p-5 rounded-2xl border text-left transition-all cursor-pointer focus-ring ${
+              className={`p-5 rounded-2xl transition-all cursor-pointer focus-ring text-left ${
                 activeIndex === i
-                  ? 'bg-white border-[#556b2f] shadow-lg ring-1 ring-[#556b2f]/30'
-                  : 'bg-white/70 border-black/8 hover:bg-white hover:border-black/15'
+                  ? 'liquid-card border-black/40 shadow-xl ring-1 ring-black/20'
+                  : 'liquid-glass-pill hover:border-black/30'
               }`}
             >
               <div className="flex items-center justify-between mb-3">

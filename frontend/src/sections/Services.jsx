@@ -60,15 +60,15 @@ export default function Services() {
       <div className="container">
         {/* Centered Header for Mobile and Desktop */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-black/8 shadow-sm mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full liquid-glass-pill mb-4">
             <span className="w-2 h-2 rounded-full bg-[#556b2f]" />
             <span className="text-xs font-semibold uppercase tracking-widest text-[#151813]">
               Studio Capabilities
             </span>
           </div>
-          <h2 className="font-playfair text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] tracking-tight leading-[1.15] mx-auto max-w-3xl font-normal">
-            <span className="italic">Six Specialized Disciplines.</span>{' '}
-            <span className="font-semibold">One Team.</span>
+          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] font-bold tracking-tight leading-[1.15] mx-auto max-w-3xl">
+            <span>Six Specialized Disciplines.</span>{' '}
+            <span className="font-playfair italic font-normal text-[#556b2f]">One Team.</span>
           </h2>
         </div>
 
@@ -81,8 +81,8 @@ export default function Services() {
                 key={s.name}
                 className={`liquid-card transition-all duration-300 overflow-hidden ${
                   isOpen
-                    ? 'border-[#556b2f]/60 bg-white shadow-xl ring-1 ring-[#556b2f]/20'
-                    : 'bg-white/70 hover:bg-white border-black/6'
+                    ? 'border-[#556b2f]/60 shadow-2xl ring-1 ring-[#556b2f]/25'
+                    : 'hover:border-white'
                 }`}
               >
                 <button
@@ -91,27 +91,23 @@ export default function Services() {
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-center gap-5 sm:gap-8">
-                    <span className="text-base sm:text-lg text-[#556b2f] font-mono font-bold">
+                    <span className="text-base sm:text-lg text-[#11140e] font-mono font-bold">
                       {s.n}
                     </span>
-                    <span
-                      className={`font-sans text-lg sm:text-xl md:text-2xl transition-colors font-semibold tracking-tight ${
-                        isOpen ? 'text-[#151813]' : 'text-[#565e53]'
-                      }`}
-                    >
+                    <h3 className="text-lg sm:text-xl font-bold text-[#11140e]">
                       {s.name}
-                    </span>
+                    </h3>
                   </div>
 
                   <div className="flex items-center gap-4 shrink-0">
-                    <span className="hidden sm:inline-block text-xs font-bold px-3 py-1 rounded-full bg-[#556b2f]/12 text-[#556b2f] border border-[#556b2f]/25">
+                    <span className="hidden sm:inline-block text-xs font-semibold px-3 py-1 rounded-full bg-black/5 text-[#11140e] border border-black/15">
                       {s.metric}
                     </span>
                     <span
                       className={`w-8 h-8 rounded-full border flex items-center justify-center text-sm font-bold transition-all ${
                         isOpen
-                          ? 'bg-[#556b2f] text-white border-[#556b2f]'
-                          : 'border-black/15 text-[#151813] hover:border-[#556b2f]'
+                          ? 'bg-[#11140e] text-white border-[#11140e]'
+                          : 'border-black/20 text-[#11140e] bg-black/5 hover:border-black/50'
                       }`}
                     >
                       {isOpen ? '−' : '+'}
@@ -136,7 +132,7 @@ export default function Services() {
                           {s.tags.map((t) => (
                             <span
                               key={t}
-                              className="text-xs font-medium px-3 py-1 rounded-full bg-black/4 border border-black/8 text-[#151813]"
+                              className="text-xs font-medium px-3 py-1 rounded-full liquid-glass-pill text-[#151813]"
                             >
                               {t}
                             </span>

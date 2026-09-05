@@ -3,7 +3,7 @@ import GooFilters from './components/GooFilters'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import VideoModal from './components/VideoModal'
-import Hero from './sections/Hero'
+import Hero from './components/Hero'
 import StatsCounter from './components/StatsCounter'
 import MovingVideos from './sections/MovingVideos'
 import Services from './sections/Services'
@@ -11,6 +11,7 @@ import BrandsOrbit from './sections/BrandsOrbit'
 import CreatorsOrbit from './sections/CreatorsOrbit'
 import Testimonials from './sections/Testimonials'
 import Contact from './sections/Contact'
+import { WhatsAppIcon } from './components/SocialIcons'
 
 export default function App() {
   const [activeVideo, setActiveVideo] = useState(null)
@@ -76,6 +77,22 @@ export default function App() {
         video={activeVideo}
         onClose={() => setActiveVideo(null)}
       />
+
+      {/* Floating Liquid Glass WhatsApp Studio Desk */}
+      <a
+        href="https://wa.me/919999999999?text=Hi%20Motion%20Labs%2C%20I%20would%20like%20to%20discuss%20a%20project."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-40 liquid-glass-pill py-2.5 px-4 rounded-full flex items-center gap-2.5 shadow-2xl hover:scale-105 active:scale-95 transition-all text-xs font-semibold text-[#151813] hover:text-[#556b2f] border border-white/95 group"
+        aria-label="Chat with Motion Labs on WhatsApp"
+      >
+        <span className="relative flex h-2.5 w-2.5">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#556b2f] opacity-75" />
+          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#556b2f]" />
+        </span>
+        <WhatsAppIcon className="w-4 h-4 text-[#556b2f] group-hover:scale-110 transition-transform" />
+        <span className="hidden sm:inline font-bold">Studio WhatsApp</span>
+      </a>
     </div>
   )
 }
