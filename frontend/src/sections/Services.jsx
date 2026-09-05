@@ -66,13 +66,10 @@ export default function Services() {
               Studio Capabilities
             </span>
           </div>
-          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] font-bold tracking-tight leading-[1.15] mx-auto max-w-3xl">
-            <span className="font-playfair italic font-normal">Six Specialized Disciplines.</span>{' '}
-            <span className="font-bold">One Team.</span>
+          <h2 className="font-playfair text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] tracking-tight leading-[1.15] mx-auto max-w-3xl font-normal">
+            <span className="italic">Six Specialized Disciplines.</span>{' '}
+            <span className="font-semibold">One Team.</span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#565e53] leading-relaxed max-w-xl mx-auto text-center">
-            From initial creative concept and shoot direction to retention edit and web launch, we handle everything under one roof.
-          </p>
         </div>
 
         {/* Accordion List */}

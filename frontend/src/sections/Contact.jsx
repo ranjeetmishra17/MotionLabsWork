@@ -50,14 +50,10 @@ export default function Contact() {
             </span>
           </div>
 
-          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] font-bold tracking-tight leading-[1.15] mb-4 mx-auto max-w-3xl">
-            <span className="font-playfair italic font-normal">Let's Build Your Next</span>{' '}
-            <span className="font-bold">Breakthrough Film.</span>
+          <h2 className="font-playfair text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] tracking-tight leading-[1.15] mx-auto max-w-3xl font-normal">
+            <span className="italic">Let's Build Your Next</span>{' '}
+            <span className="font-semibold">Breakthrough Film.</span>
           </h2>
-
-          <p className="text-[#565e53] text-base sm:text-lg leading-relaxed max-w-xl mx-auto text-center">
-            Share details about your vision, upcoming shoot, channel roadmap, or deadlines. We reply within 24 hours with an actionable scope and budget.
-          </p>
         </div>
 
         <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-14 items-start max-w-5xl mx-auto">

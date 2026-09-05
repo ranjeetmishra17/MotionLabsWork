@@ -37,12 +37,10 @@ export default function Process() {
               Production Velocity
             </span>
           </div>
-          <h2 className="display text-3xl sm:text-4xl md:text-5xl text-[#151813]">
-            Four Steps from Concept to Viral Delivery.
+          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] tracking-tight leading-[1.15] font-normal">
+            <span className="italic">Four Steps from</span>{' '}
+            <span className="font-semibold">Concept to Delivery.</span>
           </h2>
-          <p className="mt-4 text-base text-[#565e53]">
-            A frictionless workflow designed for fast-moving founders and creators. No bureaucratic agency delays.
-          </p>
         </div>
 
         {/* 4-Step Grid */}
@@ -61,7 +59,7 @@ export default function Process() {
                     {s.metric}
                   </span>
                 </div>
-                <h3 className="display text-xl text-[#151813] mb-3">{s.title}</h3>
+                <h3 className="font-playfair text-xl text-[#151813] font-bold mb-3">{s.title}</h3>
                 <p className="text-[#565e53] text-sm leading-relaxed">{s.text}</p>
               </div>
 

@@ -148,17 +148,13 @@ export default function MovingVideos({ onSelectVideo }) {
             </span>
           </div>
 
-          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] font-bold tracking-tight leading-[1.15] mx-auto max-w-3xl">
-            <span className="font-playfair italic font-normal">Reels & Edits in</span>{' '}
-            <span className="font-bold">Constant Motion.</span>
+          <h2 className="font-playfair text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] tracking-tight leading-[1.15] mx-auto max-w-3xl font-normal">
+            <span className="italic">Reels & Edits in</span>{' '}
+            <span className="font-semibold">Constant Motion.</span>
           </h2>
 
-          <p className="mt-4 text-base sm:text-lg text-[#565e53] leading-relaxed max-w-xl mx-auto text-center">
-            Engineered for algorithmic velocity, 70%+ retention curves, and high conversion. Click any reel to watch full 4K playback.
-          </p>
-
           {/* Centered Pause / Motion Control */}
-          <div className="mt-6">
+          <div className="mt-8">
             <button
               onClick={() => setIsPaused(!isPaused)}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white hover:bg-[#ebefe5] border border-black/10 text-xs font-medium text-[#151813] transition-all shadow-sm focus-ring cursor-pointer group"

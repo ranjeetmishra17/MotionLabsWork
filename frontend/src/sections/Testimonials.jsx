@@ -66,14 +66,10 @@ export default function Testimonials() {
             </span>
           </div>
 
-          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] font-bold tracking-tight leading-[1.15] mx-auto max-w-3xl">
-            <span className="font-playfair italic font-normal">What Founders &</span>{' '}
-            <span className="font-bold">Leaders Say.</span>
+          <h2 className="font-playfair text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] tracking-tight leading-[1.15] mx-auto max-w-3xl font-normal">
+            <span className="italic">What Founders &</span>{' '}
+            <span className="font-semibold">Leaders Say.</span>
           </h2>
-
-          <p className="mt-4 text-base md:text-lg text-[#565e53] max-w-xl mx-auto leading-relaxed text-center">
-            Real feedback and verified business outcomes from the founders and creators we partner with.
-          </p>
         </div>
 
         {/* Featured Testimonial Spotlight Card */}

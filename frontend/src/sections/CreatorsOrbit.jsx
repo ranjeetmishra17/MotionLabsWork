@@ -105,14 +105,10 @@ export default function CreatorsOrbit({ onPlayVideo }) {
             </span>
           </div>
 
-          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] font-bold tracking-tight leading-[1.15] mx-auto max-w-3xl">
-            <span className="font-playfair italic font-normal">Top Creators We</span>{' '}
-            <span className="font-bold">Edit & Build For</span>
+          <h2 className="font-playfair text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] tracking-tight leading-[1.15] mx-auto max-w-3xl font-normal">
+            <span className="italic">Top Creators We</span>{' '}
+            <span className="font-semibold">Edit & Build For</span>
           </h2>
-
-          <p className="mt-4 text-base md:text-lg text-[#565e53] max-w-xl mx-auto leading-relaxed text-center">
-            Click any orbiting creator node to immediately watch the high-retention YouTube episode or viral Reel we edited for them.
-          </p>
         </div>
 
         {/* Orbit Canvas & Creator Cards Grid */}

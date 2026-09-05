@@ -34,31 +34,21 @@ export default function Hero({ onOpenShowreel }) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="display text-2xl sm:text-4xl md:text-5xl lg:text-[4.5rem] text-[#151813] tracking-tight leading-[1.2] sm:leading-[1.12] max-w-4xl mx-auto font-bold px-1 sm:px-0"
+          className="font-playfair text-3xl sm:text-5xl md:text-6xl lg:text-[4.75rem] text-[#151813] tracking-tight leading-[1.12] max-w-4xl mx-auto px-1 sm:px-0"
         >
-          <span className="font-playfair italic font-normal text-[#151813]/90">We Cut, Shoot & Scale</span>{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#556b2f] via-[#6d883e] to-[#455725] font-playfair italic font-bold">
+          <span className="italic font-normal text-[#151813]/90">We Cut, Shoot & Scale</span>{' '}
+          <span className="italic font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#556b2f] via-[#6d883e] to-[#455725]">
             Category-Defining
           </span>{' '}
-          <span className="font-bold tracking-tight">Brands.</span>
+          <span className="font-semibold tracking-tight text-[#151813]">Brands.</span>
         </motion.h1>
-
-        {/* Centered Descriptive Subtext with Key Highlights */}
-        <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="mt-5 sm:mt-8 max-w-2xl text-[15px] sm:text-lg md:text-xl text-[#565e53] leading-relaxed font-normal px-2 sm:px-0"
-        >
-          Motion Labs crafts <span className="text-[#151813] font-semibold">high-retention video edits</span>, <span className="text-[#151813] font-semibold">commercial shoots</span>, creator content engines, and custom digital platforms for founders who demand attention.
-        </motion.p>
 
         {/* Responsive High-Impact Dual CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, delay: 0.15 }}
-          className="mt-8 sm:mt-10 w-full max-w-xs sm:max-w-none flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 relative z-10"
+          className="mt-8 sm:mt-12 w-full max-w-xs sm:max-w-none flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 relative z-10"
         >
           <a
             href="#contact"

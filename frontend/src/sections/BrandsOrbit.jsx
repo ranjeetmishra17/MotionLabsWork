@@ -121,14 +121,10 @@ export default function BrandsOrbit({ onPlayVideo }) {
             </span>
           </div>
 
-          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] font-bold tracking-tight leading-[1.15] mx-auto max-w-3xl">
-            <span className="font-playfair italic font-normal">Brands We Have</span>{' '}
-            <span className="font-bold">Scaled & Produced</span>
+          <h2 className="font-playfair text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] tracking-tight leading-[1.15] mx-auto max-w-3xl font-normal">
+            <span className="italic">Brands We Have</span>{' '}
+            <span className="font-semibold">Scaled & Produced</span>
           </h2>
-
-          <p className="mt-4 text-base md:text-lg text-[#565e53] max-w-xl mx-auto leading-relaxed text-center">
-            Click any orbiting brand logo to immediately play the commercial, launch film, or campaign video we produced for them.
-          </p>
         </div>
 
         {/* Orbit Canvas & Interactive Brand Grid */}

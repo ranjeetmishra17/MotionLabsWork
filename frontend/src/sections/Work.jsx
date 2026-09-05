@@ -57,8 +57,9 @@ export default function Work({ onSelectVideo }) {
                 Featured Case Studies
               </span>
             </div>
-            <h2 className="display text-3xl sm:text-4xl md:text-5xl text-[#151813]">
-              Shipped Work That Generated Real ROI.
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] tracking-tight leading-[1.15] font-normal">
+              <span className="italic">Shipped Work That</span>{' '}
+              <span className="font-semibold">Generated Real ROI.</span>
             </h2>
           </div>
 
@@ -143,7 +144,7 @@ export default function Work({ onSelectVideo }) {
                 <p className="text-xs font-semibold text-[#8db152] uppercase tracking-wider mb-2">
                   {p.category}
                 </p>
-                <h3 className="display text-2xl sm:text-3xl text-white group-hover:text-white/95 transition-colors">
+                <h3 className="font-playfair text-2xl sm:text-3xl text-white font-bold group-hover:text-white/95 transition-colors">
                   {p.title}
                 </h3>
               </div>

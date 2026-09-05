@@ -199,13 +199,10 @@ export default function OrbitUniverse() {
             </span>
           </div>
 
-          <h2 className="display text-3xl sm:text-4xl md:text-5xl text-[#151813]">
-            The Brands, Creators & Voices in Our Orbit.
+          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl text-[#151813] font-normal">
+            <span className="italic">The Brands, Creators &</span>{' '}
+            <span className="font-semibold">Voices in Our Orbit.</span>
           </h2>
-
-          <p className="mt-4 text-base text-[#565e53]">
-            Explore our ecosystem of category-leading brands, top creators, and client reviews rotating in live planetary orbit.
-          </p>
 
           {/* Interactive Filter Pills */}
           <div className="mt-8 inline-flex flex-wrap items-center justify-center gap-2 p-1.5 bg-[#f4f6f0] border border-black/8 rounded-full shadow-inner">
