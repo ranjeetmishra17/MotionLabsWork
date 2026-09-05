@@ -58,19 +58,19 @@ export default function Services() {
   return (
     <section id="services" className="py-24 md:py-32 bg-[#090a0c] border-t border-white/8 relative">
       <div className="container">
-        {/* Header with Playfair Display */}
-        <div className="max-w-2xl mb-16">
+        {/* Centered Header for Mobile and Desktop */}
+        <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#181a20] border border-white/10 shadow-sm mb-4">
             <span className="w-2 h-2 rounded-full bg-[#ff5500]" />
             <span className="text-xs font-semibold uppercase tracking-widest text-white/90">
               Studio Capabilities
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-white tracking-tight">
+          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold tracking-tight leading-[1.15] mx-auto max-w-3xl">
             <span className="font-playfair italic font-normal">Six Specialized Disciplines.</span>{' '}
             <span className="font-bold">One Team.</span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#9496a1] leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-[#9496a1] leading-relaxed max-w-xl mx-auto text-center">
             From initial creative concept and shoot direction to retention edit and web launch, we handle everything under one roof.
           </p>
         </div>

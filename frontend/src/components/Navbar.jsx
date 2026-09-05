@@ -74,40 +74,42 @@ export default function Navbar({ onOpenShowreel }) {
           </a>
         </div>
 
-        {/* Mobile Hamburger */}
+        {/* Mobile Hamburger / Toggle */}
         <button
-          className="md:hidden text-xs font-semibold border border-white/20 bg-[#14161b] rounded-full px-4 py-2 text-white focus-ring"
+          className="md:hidden flex items-center gap-2 text-xs font-semibold border border-white/15 bg-[#14161b]/90 backdrop-blur-md rounded-full px-3.5 py-1.5 text-white active:scale-95 transition-transform focus-ring"
           onClick={() => setOpen((o) => !o)}
           aria-expanded={open}
-          aria-label="Toggle menu"
+          aria-label="Toggle navigation menu"
         >
-          {open ? 'Close' : 'Menu ☰'}
+          <span className="w-2 h-2 rounded-full bg-[#ff5500]" />
+          <span>{open ? '✕ Close' : 'Menu ☰'}</span>
         </button>
       </nav>
 
       {/* Mobile Menu Drawer */}
       {open && (
-        <div className="md:hidden bg-[#0c0d10]/95 backdrop-blur-2xl border-b border-white/10 shadow-2xl">
-          <ul className="container py-6 flex flex-col gap-4 text-base font-medium text-white">
+        <div className="md:hidden bg-[#0a0b0e]/98 backdrop-blur-2xl border-b border-white/10 shadow-2xl animate-in fade-in slide-in-from-top-4 duration-200">
+          <ul className="container py-6 flex flex-col gap-3 text-base font-medium text-white">
             {LINKS.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block py-1 hover:text-[#ff5500] focus-ring"
+                  className="flex items-center justify-between py-2.5 px-3 rounded-xl hover:bg-white/5 hover:text-[#ff5500] transition-colors focus-ring"
                 >
-                  {l.label}
+                  <span>{l.label}</span>
+                  <span className="text-xs text-[#5f636e]">→</span>
                 </a>
               </li>
             ))}
-            <li className="pt-2 flex flex-col gap-3">
+            <li className="pt-3 border-t border-white/10 flex flex-col gap-2.5">
               {onOpenShowreel && (
                 <button
                   onClick={() => {
                     setOpen(false)
                     onOpenShowreel()
                   }}
-                  className="w-full text-center py-3 text-sm font-semibold rounded-full border border-white/20 text-white bg-white/5"
+                  className="w-full text-center py-3 text-sm font-semibold rounded-full border border-white/20 text-white bg-white/5 hover:bg-white/10 transition-colors"
                 >
                   ▶ Watch 2026 Showreel
                 </button>
@@ -115,7 +117,7 @@ export default function Navbar({ onOpenShowreel }) {
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="liquid-btn-primary text-center text-sm py-3"
+                className="liquid-btn-primary text-center text-sm py-3.5"
               >
                 Start a Project →
               </a>

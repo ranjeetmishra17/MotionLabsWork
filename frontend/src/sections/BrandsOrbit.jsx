@@ -121,12 +121,12 @@ export default function BrandsOrbit({ onPlayVideo }) {
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold tracking-tight leading-[1.1]">
+          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold tracking-tight leading-[1.15] mx-auto max-w-3xl">
             <span className="font-playfair italic font-normal">Brands We Have</span>{' '}
-            <span>Scaled & Produced</span>
+            <span className="font-bold">Scaled & Produced</span>
           </h2>
 
-          <p className="mt-4 text-base md:text-lg text-[#9ca3af] max-w-xl mx-auto leading-relaxed">
+          <p className="mt-4 text-base md:text-lg text-[#9ca3af] max-w-xl mx-auto leading-relaxed text-center">
             Click any orbiting brand logo to immediately play the commercial, launch film, or campaign video we produced for them.
           </p>
         </div>
@@ -135,25 +135,25 @@ export default function BrandsOrbit({ onPlayVideo }) {
         <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-14 items-center">
           {/* Orbit System Container */}
           <div
-            className={`relative aspect-square max-w-[520px] mx-auto w-full flex items-center justify-center p-4 rounded-3xl border border-white/10 bg-[#111317]/80 backdrop-blur-xl shadow-2xl ${
+            className={`relative aspect-square max-w-[340px] sm:max-w-[440px] md:max-w-[520px] mx-auto w-full flex items-center justify-center p-3 sm:p-4 rounded-3xl border border-white/10 bg-[#111317]/80 backdrop-blur-xl shadow-2xl ${
               isPaused ? 'orbit-paused' : ''
             }`}
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
             {/* Center Core */}
-            <div className="relative z-20 w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-black text-white flex flex-col items-center justify-center text-center shadow-2xl border-4 border-[#ff5500]/40 group">
+            <div className="relative z-20 w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-black text-white flex flex-col items-center justify-center text-center shadow-2xl border-2 sm:border-4 border-[#ff5500]/40 group">
               <div className="absolute inset-0 rounded-full bg-[#ff5500]/25 animate-ping pointer-events-none" />
-              <span className="font-playfair text-base sm:text-lg font-bold text-white group-hover:text-[#ff5500] transition-colors leading-tight">
+              <span className="font-playfair text-xs sm:text-base md:text-lg font-bold text-white group-hover:text-[#ff5500] transition-colors leading-tight">
                 BRANDS<br />ORBIT
               </span>
-              <span className="text-[9px] uppercase tracking-wider text-[#ff5500] font-semibold mt-0.5">
-                Click to Play ▶
+              <span className="text-[8px] sm:text-[9px] uppercase tracking-wider text-[#ff5500] font-semibold mt-0.5">
+                Play ▶
               </span>
             </div>
 
             {/* Orbit Ring 1 (Inner Track) */}
-            <div className="absolute w-[240px] h-[240px] sm:w-[280px] sm:h-[280px] rounded-full border border-dashed border-white/20 pointer-events-none animate-orbit-1">
+            <div className="absolute w-[180px] h-[180px] sm:w-[280px] sm:h-[280px] rounded-full border border-dashed border-white/20 pointer-events-none animate-orbit-1">
               {BRANDS.filter((b) => b.ring === 1).map((b, i) => (
                 <BrandNode
                   key={b.id}
@@ -167,7 +167,7 @@ export default function BrandsOrbit({ onPlayVideo }) {
             </div>
 
             {/* Orbit Ring 2 (Outer Track) */}
-            <div className="absolute w-[370px] h-[370px] sm:w-[440px] sm:h-[440px] rounded-full border border-dashed border-[#ff5500]/40 pointer-events-none animate-orbit-2">
+            <div className="absolute w-[280px] h-[280px] sm:w-[440px] sm:h-[440px] rounded-full border border-dashed border-[#ff5500]/40 pointer-events-none animate-orbit-2">
               {BRANDS.filter((b) => b.ring === 2).map((b, i) => (
                 <BrandNode
                   key={b.id}
@@ -181,8 +181,8 @@ export default function BrandsOrbit({ onPlayVideo }) {
             </div>
 
             {/* Live Orbit Status Indicator */}
-            <div className="absolute bottom-4 right-4 z-20 px-3 py-1 bg-black/80 backdrop-blur-md rounded-full border border-white/10 text-[11px] font-medium text-[#9ca3af]">
-              {isPaused ? '⏸ Orbit Paused · Click logo to play' : '⚡ Interactive Orbit · Click logo to play'}
+            <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-20 px-2.5 py-0.5 sm:px-3 sm:py-1 bg-black/80 backdrop-blur-md rounded-full border border-white/10 text-[10px] sm:text-[11px] font-medium text-[#9ca3af]">
+              {isPaused ? '⏸ Orbit Paused' : '⚡ Interactive Orbit'}
             </div>
           </div>
 

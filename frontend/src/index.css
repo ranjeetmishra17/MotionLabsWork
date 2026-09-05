@@ -276,6 +276,16 @@ a {
 
 @media (max-width: 640px) {
   .container {
-    padding: 0 20px;
+    padding: 0 18px;
   }
+
+  .liquid-btn-primary:active,
+  .liquid-btn-secondary:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Touch action optimizations */
+button, a {
+  -webkit-tap-highlight-color: transparent;
 }

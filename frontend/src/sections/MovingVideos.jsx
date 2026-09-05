@@ -137,38 +137,36 @@ export default function MovingVideos({ onSelectVideo }) {
       {/* Background Grid Pattern */}
       <div className="absolute inset-0 bg-grid-dark opacity-35 pointer-events-none" />
 
-      {/* Header Container (Left-Aligned with Playfair Display) */}
+      {/* Header Container (Centered for Mobile and Desktop) */}
       <div className="container relative z-10 mb-12 md:mb-16">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          {/* Left-Aligned Headline & Subtext */}
-          <div className="max-w-2xl text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#181a20] border border-white/10 shadow-sm mb-4">
-              <span className="w-2 h-2 rounded-full bg-[#ff5500] animate-pulse" />
-              <span className="text-xs font-semibold uppercase tracking-widest text-white/90">
-                Vertical Video Grid
-              </span>
-            </div>
-
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white tracking-tight leading-[1.08]">
-              <span className="font-playfair italic font-normal">Reels & Edits in</span>{' '}
-              <span className="font-bold">Constant Motion.</span>
-            </h2>
-
-            <p className="mt-4 text-base sm:text-lg text-[#9496a1] leading-relaxed">
-              Engineered for algorithmic velocity, 70%+ retention curves, and high conversion. Click any reel to watch full 4K playback.
-            </p>
+        <div className="text-center max-w-3xl mx-auto flex flex-col items-center">
+          {/* Centered Badge */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#181a20] border border-white/10 shadow-sm mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#ff5500] animate-pulse" />
+            <span className="text-xs font-semibold uppercase tracking-widest text-white/90">
+              Vertical Video Grid
+            </span>
           </div>
 
-          {/* Minimal Pause / Motion Control with Generous Gap */}
-          <div className="shrink-0 text-left md:text-right pb-1">
+          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold tracking-tight leading-[1.15] mx-auto max-w-3xl">
+            <span className="font-playfair italic font-normal">Reels & Edits in</span>{' '}
+            <span className="font-bold">Constant Motion.</span>
+          </h2>
+
+          <p className="mt-4 text-base sm:text-lg text-[#9496a1] leading-relaxed max-w-xl mx-auto text-center">
+            Engineered for algorithmic velocity, 70%+ retention curves, and high conversion. Click any reel to watch full 4K playback.
+          </p>
+
+          {/* Centered Pause / Motion Control */}
+          <div className="mt-6">
             <button
               onClick={() => setIsPaused(!isPaused)}
-              className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#16181e] hover:bg-[#1f222a] border border-white/12 text-xs font-medium text-white transition-all shadow-md focus-ring cursor-pointer group"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#16181e] hover:bg-[#1f222a] border border-white/12 text-xs font-medium text-white transition-all shadow-md focus-ring cursor-pointer group"
             >
               <span className={`w-2 h-2 rounded-full ${isPaused ? 'bg-amber-400' : 'bg-[#ff5500] animate-pulse'}`} />
               <span className="font-semibold">{isPaused ? '▶ Resume Motion' : '❚❚ Pause All'}</span>
-              <span className="text-[#5f636e] text-[11px] font-normal border-l border-white/10 pl-2 group-hover:text-[#9496a1] transition-colors">
-                Hover reel to freeze
+              <span className="text-[#5f636e] text-[10px] sm:text-[11px] font-normal border-l border-white/10 pl-2 group-hover:text-[#9496a1] transition-colors hidden xs:inline">
+                Tap reel to play 4K
               </span>
             </button>
           </div>
@@ -178,7 +176,7 @@ export default function MovingVideos({ onSelectVideo }) {
       {/* Vertical Moving Grid Showcase */}
       <div className="container relative z-10">
         <div
-          className={`relative h-[620px] md:h-[700px] overflow-hidden rounded-3xl border border-white/10 bg-[#08090b]/80 p-4 md:p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 shadow-2xl ${
+          className={`relative h-[520px] sm:h-[620px] md:h-[700px] overflow-hidden rounded-3xl border border-white/10 bg-[#08090b]/80 p-3 sm:p-4 md:p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 shadow-2xl ${
             isPaused ? 'orbit-paused' : ''
           }`}
         >

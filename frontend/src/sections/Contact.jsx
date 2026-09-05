@@ -41,47 +41,66 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 md:py-32 bg-[#090a0c] border-t border-white/8 relative">
       <div className="container">
-        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16 items-start">
+        {/* Centered Section Header for Mobile and Desktop */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#181a20] border border-white/10 shadow-sm mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#ff5500]" />
+            <span className="text-xs font-semibold uppercase tracking-widest text-white/90">
+              Start a Collaboration
+            </span>
+          </div>
+
+          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold tracking-tight leading-[1.15] mb-4 mx-auto max-w-3xl">
+            <span className="font-playfair italic font-normal">Let's Build Your Next</span>{' '}
+            <span className="font-bold">Breakthrough Film.</span>
+          </h2>
+
+          <p className="text-[#9ca3af] text-base sm:text-lg leading-relaxed max-w-xl mx-auto text-center">
+            Share details about your vision, upcoming shoot, channel roadmap, or deadlines. We reply within 24 hours with an actionable scope and budget.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-14 items-start max-w-5xl mx-auto">
           {/* Left Info Column */}
-          <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#181a20] border border-white/10 shadow-sm mb-4">
-              <span className="w-2 h-2 rounded-full bg-[#ff5500]" />
-              <span className="text-xs font-semibold uppercase tracking-widest text-white/90">
-                Start a Collaboration
-              </span>
+          <div className="liquid-card p-6 sm:p-8 bg-[#111317]/80 border-white/10 space-y-6">
+            <div>
+              <h3 className="text-lg font-bold text-white mb-2">Direct Inquiries</h3>
+              <p className="text-sm text-[#9ca3af] leading-relaxed">
+                Prefer email or looking for a long-term production retainer? Reach our producers directly.
+              </p>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl text-white mb-6">
-              <span className="font-playfair italic font-normal">Let's Build Your Next</span>{' '}
-              <span className="font-bold">Breakthrough Film.</span>
-            </h2>
-
-            <p className="text-[#9ca3af] text-base sm:text-lg leading-relaxed mb-10 max-w-lg">
-              Share details about your vision, upcoming shoot, channel roadmap, or deadlines. We reply within 24 hours with an actionable scope and budget.
-            </p>
-
             {/* Direct Channels */}
-            <div className="space-y-4 text-sm text-[#9ca3af] border-t border-white/10 pt-8">
-              <div className="flex items-center gap-3">
-                <span className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white font-bold">
+            <div className="space-y-4 text-sm text-[#9ca3af] border-t border-white/10 pt-6">
+              <div className="flex items-center gap-3.5">
+                <span className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white font-bold text-sm shrink-0">
                   ✉
                 </span>
                 <div>
-                  <p className="text-xs text-[#6b7280] uppercase font-semibold">Direct Email</p>
+                  <p className="text-[11px] text-[#6b7280] uppercase font-semibold">Direct Email</p>
                   <a href="mailto:hello@motionlabs.in" className="text-white font-semibold hover:text-[#ff5500] transition-colors">
                     hello@motionlabs.in
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
-                <span className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white font-bold">
+              <div className="flex items-center gap-3.5">
+                <span className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white font-bold text-sm shrink-0">
                   📍
                 </span>
                 <div>
-                  <p className="text-xs text-[#6b7280] uppercase font-semibold">Studio Headquarters</p>
+                  <p className="text-[11px] text-[#6b7280] uppercase font-semibold">Studio Headquarters</p>
                   <p className="text-white font-medium">New Delhi, India · Global Remote Productions</p>
                 </div>
+              </div>
+            </div>
+
+            <div className="border-t border-white/10 pt-6">
+              <div className="p-3.5 rounded-xl bg-[#ff5500]/10 border border-[#ff5500]/25 flex items-center gap-3">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#ff5500] animate-pulse shrink-0" />
+                <span className="text-xs font-semibold text-white/90">
+                  Currently accepting new projects for Q2/Q3 2026.
+                </span>
               </div>
             </div>
           </div>

@@ -66,12 +66,12 @@ export default function Testimonials() {
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-white">
+          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold tracking-tight leading-[1.15] mx-auto max-w-3xl">
             <span className="font-playfair italic font-normal">What Founders &</span>{' '}
             <span className="font-bold">Leaders Say.</span>
           </h2>
 
-          <p className="mt-4 text-base text-[#9ca3af]">
+          <p className="mt-4 text-base md:text-lg text-[#9ca3af] max-w-xl mx-auto leading-relaxed text-center">
             Real feedback and verified business outcomes from the founders and creators we partner with.
           </p>
         </div>
