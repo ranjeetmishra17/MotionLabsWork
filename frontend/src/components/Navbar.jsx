@@ -28,26 +28,26 @@ export default function Navbar() {
       <nav className="container flex items-center justify-between">
         {/* Brand Logo */}
         <a href="#top" className="flex items-center gap-2.5 group focus-ring">
-          <div className="w-8 h-8 rounded-xl bg-[#11140e] text-white flex items-center justify-center font-bold text-sm shadow-md border border-black/20 group-hover:border-[#556b2f] transition-all">
-            <span className="group-hover:text-[#8db152] transition-colors">M</span>
+          <div className="w-8 h-8 rounded-xl bg-[#09090b] text-white flex items-center justify-center font-bold text-sm shadow-md border border-black/20 group-hover:border-black transition-all">
+            <span className="text-white transition-colors">M</span>
           </div>
           <div className="flex flex-col">
-            <span className="display text-lg font-bold tracking-tight text-[#11140e] leading-none">
+            <span className="display text-lg font-bold tracking-tight text-[#09090b] leading-none">
               Motion Labs
             </span>
-            <span className="text-[10px] uppercase font-semibold text-[#565e53] tracking-widest mt-0.5">
+            <span className="text-[10px] uppercase font-semibold text-[#71717a] tracking-widest mt-0.5">
               Production Studio
             </span>
           </div>
         </a>
 
         {/* Desktop & Tablet Links */}
-        <ul className="hidden md:flex items-center gap-5 lg:gap-7 text-sm font-medium text-[#565e53]">
+        <ul className="hidden md:flex items-center gap-5 lg:gap-7 text-sm font-medium text-[#52525b]">
           {LINKS.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className="hover:text-[#151813] transition-colors focus-ring py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#556b2f] hover:after:w-full after:transition-all after:duration-300"
+                className="hover:text-[#09090b] transition-colors focus-ring py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#09090b] hover:after:w-full after:transition-all after:duration-300"
               >
                 {l.label}
               </a>
@@ -67,12 +67,12 @@ export default function Navbar() {
 
         {/* Mobile Hamburger / Toggle */}
         <button
-          className="md:hidden flex items-center gap-2 text-xs font-semibold liquid-glass-pill rounded-full px-3.5 py-1.5 text-[#151813] active:scale-95 transition-transform focus-ring cursor-pointer"
+          className="md:hidden flex items-center gap-2 text-xs font-semibold liquid-glass-pill rounded-full px-3.5 py-1.5 text-[#09090b] active:scale-95 transition-transform focus-ring cursor-pointer"
           onClick={() => setOpen((o) => !o)}
           aria-expanded={open}
           aria-label="Toggle navigation menu"
         >
-          <span className="w-2 h-2 rounded-full bg-[#556b2f]" />
+          <span className="w-2 h-2 rounded-full bg-[#09090b]" />
           <span>{open ? '✕ Close' : 'Menu ☰'}</span>
         </button>
       </nav>
@@ -80,16 +80,16 @@ export default function Navbar() {
       {/* Mobile Menu Drawer */}
       {open && (
         <div className="md:hidden bg-white/95 backdrop-blur-2xl border-b border-white/80 shadow-2xl animate-in fade-in slide-in-from-top-4 duration-200">
-          <ul className="container py-6 flex flex-col gap-3 text-base font-medium text-[#151813]">
+          <ul className="container py-6 flex flex-col gap-3 text-base font-medium text-[#09090b]">
             {LINKS.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-between py-2.5 px-3 rounded-xl hover:bg-black/5 hover:text-[#556b2f] transition-colors focus-ring"
+                  className="flex items-center justify-between py-2.5 px-3 rounded-xl hover:bg-black/5 hover:text-[#09090b] transition-colors focus-ring"
                 >
                   <span>{l.label}</span>
-                  <span className="text-xs text-[#7d8778]">→</span>
+                  <span className="text-xs text-[#71717a]">→</span>
                 </a>
               </li>
             ))}

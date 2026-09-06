@@ -1,37 +1,45 @@
 @import "tailwindcss";
 
 :root {
-  /* Strictly Three-Color Light Luxury Palette: White, Olive Green & Black */
-  --bg-dark: #fbfcf9;
+  /* Ultra-Refined Black & White Monochrome Spectrum:
+     Obsidian (#050507, #09090b)
+     Charcoal & Onyx (#18181b, #27272a)
+     Slate & Gunmetal (#3f3f46, #52525b)
+     Titanium & Zinc (#71717a, #a1a1aa)
+     Platinum & Silver (#d4d4d8, #e4e4e7)
+     Pearl & Alabaster (#f4f4f6, #fafafb, #ffffff)
+  */
+  --bg-dark: #fafafb;
   --bg-surface: #ffffff;
-  --bg-surface-elevated: #f3f5ee;
+  --bg-surface-elevated: #f4f4f6;
   
-  --text-white: #0a0c08; /* Deep rich black */
-  --text-muted: #4a5246; /* Charcoal black */
-  --text-subtle: #727a6e; /* Subtle muted black */
+  --text-white: #09090b; /* Deep Obsidian Ink */
+  --text-muted: #52525b; /* Zinc Charcoal */
+  --text-subtle: #71717a; /* Titanium Gray */
+  --text-silver: #a1a1aa; /* Brushed Silver */
   
-  --accent-orange: #556b2f; /* Signature Olive Green */
-  --accent-orange-hover: #435523; /* Deep Olive Hover */
-  --accent-orange-glow: rgba(85, 107, 47, 0.24);
-  --accent-orange-subtle: rgba(85, 107, 47, 0.12);
+  --accent-orange: #09090b; /* Signature Obsidian Accent */
+  --accent-orange-hover: #27272a; /* Slate Hover */
+  --accent-orange-glow: rgba(0, 0, 0, 0.16);
+  --accent-orange-subtle: rgba(0, 0, 0, 0.05);
 
   --color-white: #ffffff;
-  --color-black: #0a0c08;
-  --color-olive: #556b2f;
+  --color-black: #09090b;
+  --color-olive: #09090b;
 
-  --border-dark-subtle: rgba(0, 0, 0, 0.08);
+  --border-dark-subtle: rgba(0, 0, 0, 0.07);
   --border-dark-medium: rgba(0, 0, 0, 0.14);
-  --border-orange: rgba(85, 107, 47, 0.40);
+  --border-orange: rgba(0, 0, 0, 0.35);
 
-  /* Ultra-Refined Liquid Glass System */
-  --glass-bg: rgba(255, 255, 255, 0.82);
-  --glass-bg-subtle: rgba(255, 255, 255, 0.60);
-  --glass-bg-elevated: rgba(255, 255, 255, 0.94);
-  --glass-border: rgba(255, 255, 255, 0.85);
-  --glass-border-subtle: rgba(21, 24, 19, 0.08);
-  --glass-specular: inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 1px 0 rgba(21, 24, 19, 0.03);
-  --glass-shadow: 0 20px 45px -15px rgba(21, 24, 19, 0.07), 0 4px 16px -2px rgba(21, 24, 19, 0.03);
-  --glass-blur: blur(28px) saturate(190%);
+  /* Ultra-Refined Liquid Glass System with Multi-Tonal Specular Highlights */
+  --glass-bg: rgba(255, 255, 255, 0.90);
+  --glass-bg-subtle: rgba(255, 255, 255, 0.70);
+  --glass-bg-elevated: rgba(255, 255, 255, 0.98);
+  --glass-border: rgba(255, 255, 255, 0.95);
+  --glass-border-subtle: rgba(0, 0, 0, 0.08);
+  --glass-specular: inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 1), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.04);
+  --glass-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.08), 0 4px 16px -2px rgba(0, 0, 0, 0.03);
+  --glass-blur: blur(28px) saturate(100%);
 }
 
 * {
@@ -92,7 +100,7 @@ a {
 }
 
 ::selection {
-  background: var(--accent-orange);
+  background: #09090b;
   color: #ffffff;
 }
 
@@ -101,12 +109,12 @@ a {
   filter: url(#goo);
 }
 
-/* Luxury Liquid Frosted Glass Cards with Specular Highlight */
+/* Luxury Liquid Frosted Glass Cards with Dual Specular Highlight */
 .liquid-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.68) 100%);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.94) 0%, rgba(250, 250, 252, 0.78) 100%);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 24px;
   box-shadow: var(--glass-specular), var(--glass-shadow);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -114,26 +122,26 @@ a {
 }
 
 .liquid-card:hover {
-  border-color: rgba(85, 107, 47, 0.40);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.78) 100%);
-  box-shadow: inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 1), 0 25px 50px -12px rgba(85, 107, 47, 0.18), 0 0 0 1px rgba(85, 107, 47, 0.25);
+  border-color: rgba(0, 0, 0, 0.28);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98) 0%, rgba(252, 252, 254, 0.88) 100%);
+  box-shadow: inset 0 2px 2px 0 rgba(255, 255, 255, 1), 0 25px 50px -12px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
 
 /* Frosted Liquid Glass Pill / Badge */
 .liquid-glass-pill {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.70) 100%);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.95);
-  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.95), 0 6px 18px -4px rgba(21, 24, 19, 0.07);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.94) 0%, rgba(248, 248, 250, 0.78) 100%);
+  backdrop-filter: blur(20px) saturate(100%);
+  -webkit-backdrop-filter: blur(20px) saturate(100%);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 1), 0 6px 18px -4px rgba(0, 0, 0, 0.05);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .liquid-glass-pill:hover {
-  background: rgba(255, 255, 255, 0.98);
-  border-color: rgba(85, 107, 47, 0.4);
-  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 1), 0 8px 24px -4px rgba(85, 107, 47, 0.15);
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 1px 1.5px 0 rgba(255, 255, 255, 1), 0 8px 24px -4px rgba(0, 0, 0, 0.10);
   transform: translateY(-1px);
 }
 
@@ -143,23 +151,23 @@ a {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: linear-gradient(180deg, #181d15 0%, #0c0f0a 100%);
+  background: linear-gradient(180deg, #27272a 0%, #09090b 100%);
   color: #ffffff;
   font-weight: 600;
   font-size: 0.95rem;
   padding: 14px 28px;
   border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  box-shadow: inset 0 1.5px 1.5px rgba(255, 255, 255, 0.35), 0 10px 28px -4px rgba(12, 15, 10, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow: inset 0 1.5px 1.5px rgba(255, 255, 255, 0.38), 0 10px 28px -4px rgba(0, 0, 0, 0.45);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
 }
 
 .liquid-btn-primary:hover {
-  background: linear-gradient(180deg, #262e20 0%, #141911 100%);
-  border-color: rgba(85, 107, 47, 0.6);
+  background: linear-gradient(180deg, #3f3f46 0%, #18181b 100%);
+  border-color: rgba(255, 255, 255, 0.50);
   transform: translateY(-2px);
-  box-shadow: inset 0 1.5px 2px rgba(255, 255, 255, 0.45), 0 14px 34px -2px rgba(12, 15, 10, 0.5), 0 0 0 1px rgba(85, 107, 47, 0.35);
+  box-shadow: inset 0 1.5px 2px rgba(255, 255, 255, 0.55), 0 14px 34px -2px rgba(0, 0, 0, 0.50), 0 0 0 1px rgba(255, 255, 255, 0.2);
 }
 
 /* Liquid Secondary Frosted Glass Button */
@@ -168,29 +176,29 @@ a {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.65) 100%);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92) 0%, rgba(244, 244, 246, 0.75) 100%);
   color: var(--text-white);
   font-weight: 600;
   font-size: 0.95rem;
   padding: 14px 28px;
   border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  box-shadow: inset 0 1.5px 1.5px rgba(255, 255, 255, 0.95), 0 6px 20px -4px rgba(21, 24, 19, 0.07);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(20px) saturate(100%);
+  -webkit-backdrop-filter: blur(20px) saturate(100%);
+  box-shadow: inset 0 1.5px 1.5px rgba(255, 255, 255, 1), 0 6px 20px -4px rgba(0, 0, 0, 0.06);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
 }
 
 .liquid-btn-secondary:hover {
-  border-color: #151813;
-  background: rgba(255, 255, 255, 0.96);
+  border-color: #09090b;
+  background: #ffffff;
   transform: translateY(-2px);
-  box-shadow: inset 0 1.5px 1.5px rgba(255, 255, 255, 1), 0 10px 25px -4px rgba(21, 24, 19, 0.12);
+  box-shadow: inset 0 1.5px 1.5px rgba(255, 255, 255, 1), 0 10px 25px -4px rgba(0, 0, 0, 0.12);
 }
 
 .focus-ring:focus-visible {
-  outline: 2px solid var(--accent-orange);
+  outline: 2px solid #0a0a0a;
   outline-offset: 3px;
   border-radius: 6px;
 }
@@ -314,6 +322,63 @@ a {
 .bg-dots-dark {
   background-image: radial-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 1px);
   background-size: 24px 24px;
+}
+
+/* Luxury Monochromatic Metallic & Disc Aesthetics */
+.text-chrome {
+  background: linear-gradient(135deg, #09090b 0%, #52525b 35%, #a1a1aa 60%, #18181b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-chrome-light {
+  background: linear-gradient(135deg, #ffffff 0%, #d4d4d8 45%, #71717a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.metallic-core {
+  background: radial-gradient(circle at 35% 35%, #3f3f46 0%, #18181b 45%, #09090b 100%);
+  box-shadow: 
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.45),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.85),
+    0 16px 36px -8px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+.metallic-core:hover {
+  background: radial-gradient(circle at 35% 35%, #52525b 0%, #27272a 45%, #0e0e10 100%);
+  box-shadow: 
+    inset 0 2px 2.5px rgba(255, 255, 255, 0.65),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.85),
+    0 20px 44px -8px rgba(0, 0, 0, 0.55),
+    0 0 0 2px rgba(255, 255, 255, 0.35);
+  transform: scale(1.03);
+}
+
+.node-disc {
+  background: linear-gradient(145deg, #27272a 0%, #0d0d0f 100%);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 
+    inset 0 1.5px 1.5px rgba(255, 255, 255, 0.40),
+    0 8px 20px -4px rgba(0, 0, 0, 0.35);
+}
+
+.node-disc:hover {
+  background: linear-gradient(145deg, #3f3f46 0%, #18181b 100%);
+  border-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.60),
+    0 14px 30px -4px rgba(0, 0, 0, 0.50),
+    0 0 0 4px rgba(212, 212, 216, 0.45);
+}
+
+.specular-gloss {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 30%, transparent 60%);
+  pointer-events: none;
+  border-radius: inherit;
 }
 
 @media (max-width: 640px) {

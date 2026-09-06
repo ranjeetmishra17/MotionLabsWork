@@ -52,23 +52,25 @@ export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0)
 
   return (
-    <section id="testimonials" className="py-24 md:py-32 bg-[#fbfcf9] border-t border-black/8 relative overflow-hidden">
+    <section id="testimonials" className="py-24 md:py-32 bg-[#fafafb] border-t border-black/8 relative overflow-hidden">
       {/* Background Subtle Dot Matrix */}
-      <div className="absolute inset-0 bg-dots-dark opacity-50 pointer-events-none" />
+      <div className="absolute inset-0 bg-dots-dark opacity-35 pointer-events-none" />
 
       <div className="container relative z-10">
         {/* Centered Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full liquid-glass-pill mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#556b2f]" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-[#151813]">
+            <span className="w-2 h-2 rounded-full bg-[#09090b]" />
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#09090b]">
               Client Testimonials & Outcomes
             </span>
           </div>
 
-          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] font-bold tracking-tight leading-[1.15] mx-auto max-w-3xl">
+          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#09090b] font-bold tracking-tight leading-[1.15] mx-auto max-w-3xl">
             <span>What Founders &</span>{' '}
-            <span className="font-playfair italic font-normal text-[#556b2f]">Leaders Say.</span>
+            <span className="font-playfair italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#18181b] via-[#52525b] to-[#09090b]">
+              Leaders Say.
+            </span>
           </h2>
         </div>
 
@@ -83,32 +85,32 @@ export default function Testimonials() {
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
               className="liquid-card p-8 sm:p-12 shadow-2xl relative"
             >
-              {/* Subtle Olive Flare */}
-              <div className="absolute top-0 right-0 w-40 h-40 bg-[#556b2f]/10 rounded-full blur-3xl pointer-events-none" />
+              {/* Subtle Monochrome Flare */}
+              <div className="absolute top-0 right-0 w-48 h-48 bg-black/5 rounded-full blur-3xl pointer-events-none" />
 
               <div className="flex items-center justify-between gap-4 mb-8">
-                <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#11140e] text-white shadow-sm">
+                <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#09090b] text-white shadow-sm">
                   {REVIEWS[activeIndex].tag}
                 </span>
-                <span className="text-xs font-bold text-[#11140e] px-3.5 py-1 rounded-full bg-black/5 border border-black/15">
+                <span className="text-xs font-bold text-[#09090b] px-3.5 py-1 rounded-full bg-black/5 border border-black/15">
                   {REVIEWS[activeIndex].stat}
                 </span>
               </div>
 
-              <blockquote className="text-lg sm:text-2xl text-[#11140e] font-medium leading-relaxed mb-8 italic">
+              <blockquote className="text-lg sm:text-2xl text-[#09090b] font-medium leading-relaxed mb-8 italic">
                 "{REVIEWS[activeIndex].quote}"
               </blockquote>
 
               <div className="flex items-center justify-between gap-4 border-t border-black/8 pt-6">
                 <div className="flex items-center gap-3.5">
-                  <div className="w-11 h-11 rounded-xl bg-[#11140e] text-white font-bold text-sm flex items-center justify-center shadow-md border border-black/20">
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#27272a] to-[#09090b] text-white font-bold text-sm flex items-center justify-center shadow-md border border-white/20">
                     {REVIEWS[activeIndex].avatar}
                   </div>
                   <div>
-                    <h3 className="font-sans font-bold text-[#11140e] text-base">
+                    <h3 className="font-sans font-bold text-[#09090b] text-base">
                       {REVIEWS[activeIndex].name}
                     </h3>
-                    <p className="text-xs text-[#565e53]">
+                    <p className="text-xs text-[#71717a]">
                       {REVIEWS[activeIndex].role}, {REVIEWS[activeIndex].company}
                     </p>
                   </div>
@@ -120,10 +122,10 @@ export default function Testimonials() {
                     <button
                       key={i}
                       onClick={() => setActiveIndex(i)}
-                      className={`w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${
+                      className={`h-2.5 rounded-full transition-all cursor-pointer ${
                         activeIndex === i
-                          ? 'w-8 bg-[#11140e]'
-                          : 'bg-black/15 hover:bg-black/30'
+                          ? 'w-8 bg-[#09090b]'
+                          : 'w-2.5 bg-black/15 hover:bg-black/35'
                       }`}
                       aria-label={`View testimonial ${i + 1}`}
                     />
@@ -147,10 +149,10 @@ export default function Testimonials() {
               }`}
             >
               <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-bold text-[#151813]">{r.name}</span>
-                <span className="text-[10px] text-[#556b2f] font-bold">{r.stat}</span>
+                <span className="text-xs font-bold text-[#09090b]">{r.name}</span>
+                <span className="text-[10px] text-[#09090b] font-bold">{r.stat}</span>
               </div>
-              <p className="text-xs text-[#565e53] line-clamp-2">
+              <p className="text-xs text-[#71717a] line-clamp-2">
                 "{r.quote}"
               </p>
             </button>

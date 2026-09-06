@@ -27,19 +27,21 @@ const STEPS = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-24 md:py-32 bg-[#fbfcf9] border-t border-black/8 relative">
+    <section id="process" className="py-24 md:py-32 bg-[#fafafb] border-t border-black/8 relative">
       <div className="container">
         {/* Header */}
         <div className="max-w-2xl mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-black/8 shadow-sm mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#556b2f]" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-[#151813]">
+            <span className="w-2 h-2 rounded-full bg-[#09090b]" />
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#09090b]">
               Production Velocity
             </span>
           </div>
-          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#151813] tracking-tight leading-[1.15] font-normal">
-            <span className="italic">Four Steps from</span>{' '}
-            <span className="font-semibold">Concept to Delivery.</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#09090b] font-bold tracking-tight leading-[1.15]">
+            <span>Four Steps from</span>{' '}
+            <span className="font-playfair italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#18181b] via-[#52525b] to-[#09090b]">
+              Concept to Delivery.
+            </span>
           </h2>
         </div>
 
@@ -52,18 +54,18 @@ export default function Process() {
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <span className="display text-2xl font-bold text-[#556b2f] font-mono">
+                  <span className="display text-2xl font-bold text-[#09090b] font-mono">
                     {s.n}
                   </span>
-                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-black/5 text-[#151813] border border-black/8">
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-black/5 text-[#09090b] border border-black/8">
                     {s.metric}
                   </span>
                 </div>
-                <h3 className="font-sans text-xl text-[#151813] font-bold mb-3">{s.title}</h3>
-                <p className="text-[#565e53] text-sm leading-relaxed">{s.text}</p>
+                <h3 className="font-sans text-xl text-[#09090b] font-bold mb-3">{s.title}</h3>
+                <p className="text-[#52525b] text-sm leading-relaxed">{s.text}</p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-black/5 flex items-center gap-2 text-xs font-semibold text-[#556b2f]">
+              <div className="mt-6 pt-4 border-t border-black/5 flex items-center gap-2 text-xs font-semibold text-[#09090b]">
                 <span>Phase {s.n} Guaranteed</span>
                 <span>→</span>
               </div>

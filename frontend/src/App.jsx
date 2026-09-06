@@ -7,8 +7,7 @@ import Hero from './components/Hero'
 import StatsCounter from './components/StatsCounter'
 import MovingVideos from './sections/MovingVideos'
 import Services from './sections/Services'
-import BrandsOrbit from './sections/BrandsOrbit'
-import CreatorsOrbit from './sections/CreatorsOrbit'
+import Orbits from './sections/Orbits'
 import Testimonials from './sections/Testimonials'
 import Contact from './sections/Contact'
 import { WhatsAppIcon } from './components/SocialIcons'
@@ -24,7 +23,7 @@ export default function App() {
       duration: '01:15',
       creator: 'Motion Labs Production',
       stats: '150+ Projects Across 2025–2026',
-      bgGradient: 'radial-gradient(circle at 40% 40%, #556b2f, #19220e 80%)',
+      bgGradient: 'radial-gradient(circle at 40% 40%, #383838, #0e0e0e 80%)',
       description:
         'A comprehensive showcase of high-retention video edits, commercial shoots, 3D product animations, and brand launches produced by Motion Labs.',
     })
@@ -35,7 +34,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#fbfcf9] text-[#151813] selection:bg-[#556b2f] selection:text-white">
+    <div className="min-h-screen bg-[#fafafb] text-[#09090b] selection:bg-black selection:text-white">
       {/* SVG Gooey Liquid Filter System */}
       <GooFilters />
 
@@ -56,16 +55,13 @@ export default function App() {
         {/* 4. Services Section (Directly after Reels) */}
         <Services />
 
-        {/* 5. Top Brands Orbit */}
-        <BrandsOrbit onPlayVideo={handlePlayVideo} />
+        {/* 5. Top Brands & Creators Orbits (Side by Side) */}
+        <Orbits onPlayVideo={handlePlayVideo} />
 
-        {/* 6. Top Creators Orbit */}
-        <CreatorsOrbit onPlayVideo={handlePlayVideo} />
-
-        {/* 7. Dedicated Testimonials Section */}
+        {/* 6. Dedicated Testimonials Section */}
         <Testimonials />
 
-        {/* 8. Contact Inquiry Form */}
+        {/* 7. Contact Inquiry Form */}
         <Contact />
       </main>
 
@@ -83,14 +79,14 @@ export default function App() {
         href="https://wa.me/919999999999?text=Hi%20Motion%20Labs%2C%20I%20would%20like%20to%20discuss%20a%20project."
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-40 liquid-glass-pill py-2.5 px-4 rounded-full flex items-center gap-2.5 shadow-2xl hover:scale-105 active:scale-95 transition-all text-xs font-semibold text-[#151813] hover:text-[#556b2f] border border-white/95 group"
+        className="fixed bottom-6 right-6 z-40 liquid-glass-pill py-2.5 px-4 rounded-full flex items-center gap-2.5 shadow-2xl hover:scale-105 active:scale-95 transition-all text-xs font-semibold text-[#09090b] hover:text-black border border-black/10 group"
         aria-label="Chat with Motion Labs on WhatsApp"
       >
         <span className="relative flex h-2.5 w-2.5">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#556b2f] opacity-75" />
-          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#556b2f]" />
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#09090b] opacity-75" />
+          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#09090b]" />
         </span>
-        <WhatsAppIcon className="w-4 h-4 text-[#556b2f] group-hover:scale-110 transition-transform" />
+        <WhatsAppIcon className="w-4 h-4 text-[#09090b] group-hover:scale-110 transition-transform" />
         <span className="hidden sm:inline font-bold">Studio WhatsApp</span>
       </a>
     </div>

@@ -3,10 +3,10 @@ import { motion } from 'framer-motion'
 export default function LiquidBlob({ className = '' }) {
   const blobs = [
     { cx: 240, cy: 220, r: 130, fill: 'url(#gradOrangePure)', delay: 0 },
-    { cx: 330, cy: 170, r: 90, fill: '#556b2f', delay: 0.1 },
-    { cx: 280, cy: 300, r: 85, fill: '#6e893e', delay: 0.18 },
-    { cx: 160, cy: 310, r: 70, fill: '#3d4d22', delay: 0.25 },
-    { cx: 180, cy: 170, r: 60, fill: '#50662a', delay: 0.3 },
+    { cx: 330, cy: 170, r: 90, fill: '#222222', delay: 0.1 },
+    { cx: 280, cy: 300, r: 85, fill: '#383838', delay: 0.18 },
+    { cx: 160, cy: 310, r: 70, fill: '#141414', delay: 0.25 },
+    { cx: 180, cy: 170, r: 60, fill: '#2b2b2b', delay: 0.3 },
   ]
 
   return (
