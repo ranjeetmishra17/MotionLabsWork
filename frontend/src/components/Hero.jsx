@@ -8,31 +8,25 @@ export default function Hero({ onOpenShowreel }) {
     <section id="top" className="relative pt-28 pb-16 sm:pt-36 sm:pb-24 md:pt-44 md:pb-32 overflow-hidden bg-[#fafafb]">
       {/* Cinematic Studio Photography Background Layer (Responsive Mobile & Desktop) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
-        {/* Mobile View Background: explicit absolute inset-0 ensuring full bottom coverage */}
-        <img
-          src={heroBgMobile}
-          alt="Motion Labs Cinematic Studio"
-          className="md:hidden absolute inset-0 w-full h-full object-cover object-bottom opacity-80 filter contrast-[1.05] brightness-[0.95]"
-          loading="eager"
-          fetchPriority="high"
-        />
-        {/* Desktop / Tablet View Background */}
-        <img
-          src={heroBg}
-          alt="Motion Labs Cinematic Studio"
-          className="hidden md:block absolute inset-0 w-full h-full object-cover object-center opacity-80 filter contrast-[1.05] brightness-[0.95]"
-          loading="eager"
-          fetchPriority="high"
-        />
-
+        <picture className="w-full h-full">
+          <source media="(max-width: 767px)" srcSet={heroBgMobile} />
+          <source media="(min-width: 768px)" srcSet={heroBg} />
+          <img
+            src={heroBg}
+            alt="Motion Labs Cinematic Studio"
+            className="w-full h-full object-cover object-center opacity-80 filter contrast-[1.05] brightness-[0.95]"
+            loading="eager"
+            fetchPriority="high"
+          />
+        </picture>
         {/* Delicate Scrim for Balanced Depth */}
         <div className="absolute inset-0 bg-black/6 sm:bg-black/8" />
 
         {/* Soft Center Feathering for Clean Light Balance */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_50%_45%,rgba(250,250,251,0.55)_0%,rgba(250,250,251,0.18)_65%,transparent_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_50%_45%,rgba(250,250,251,0.60)_0%,rgba(250,250,251,0.25)_65%,transparent_100%)]" />
 
-        {/* Seamless Soft Edge Fades: very gentle at the bottom edge so photo is visible throughout */}
-        <div className="absolute inset-x-0 bottom-0 h-10 sm:h-20 md:h-28 bg-gradient-to-t from-[#fafafb] via-[#fafafb]/40 to-transparent" />
+        {/* Seamless Soft Edge Fades */}
+        <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#fafafb] via-[#fafafb]/85 to-transparent" />
         <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#fafafb]/60 to-transparent" />
       </div>
 
@@ -134,7 +128,7 @@ export default function Hero({ onOpenShowreel }) {
       </div>
 
       {/* Atmospheric Ambient Liquid Blob Lighting */}
-      <div className="hidden md:block absolute -bottom-10 left-1/2 -translate-x-1/2 w-[500px] h-[140px] opacity-25 filter blur-[40px] pointer-events-none">
+      <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[340px] sm:w-[500px] h-[100px] sm:h-[140px] opacity-40 filter blur-[40px] pointer-events-none">
         <LiquidBlob className="w-full h-full" />
       </div>
     </section>
