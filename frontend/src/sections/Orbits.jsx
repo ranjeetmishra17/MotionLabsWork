@@ -1,99 +1,99 @@
 import { useState } from 'react'
 
+// Brand Logos
+import equalAiLogo from '../assets/brand-logos/Equal AI.webp'
+import paytmLogo from '../assets/brand-logos/Paytm.webp'
+import sriMandirLogo from '../assets/brand-logos/Sri Mandir.webp'
+import starttLogo from '../assets/brand-logos/Startt.webp'
+
+// Creator Logos & Avatars
+import dearSirImg from '../assets/creator-logos/Dear Sir.webp'
+import nakulMehtaImg from '../assets/creator-logos/Nakul Mehta.webp'
+import rajShamaniImg from '../assets/creator-logos/Raj Shamni.webp'
+import thugeshImg from '../assets/creator-logos/Thugesh.webp'
+
+// Studio Core Logo
+import logoWhite from '../assets/White Without BG.png'
+
 const BRANDS = [
   {
     id: 'b1',
-    name: 'Nocturne Skincare',
-    category: 'Beauty & Skincare',
-    stat: '4.2x ROAS',
-    avatar: 'NC',
+    name: 'Paytm',
+    category: 'Fintech & Digital Payments',
+    stat: '450M+ Users',
+    image: paytmLogo,
+    isLogoWithPadding: true,
     ring: 1,
     angle: 0,
     video: {
-      id: 'brand-nocturne',
-      title: 'Nocturne Skincare — 4K Clinical Launch Film',
-      category: 'Product Shoot · Macro 4K',
+      id: 'brand-paytm',
+      title: 'Paytm — High-Velocity Commercial Campaign',
+      category: 'Commercial Ad · 4K Color Grade',
       duration: '0:45',
-      creator: 'Nocturne Skincare',
-      stats: '3.4M Views · 4.2x ROAS',
-      bgGradient: 'radial-gradient(circle at 40% 40%, #383838, #111111 80%)',
-      description: 'Cinematic studio lighting, slow-motion texture captures, and high-converting hook edits produced for Nocturne Skincare.',
+      creator: 'Paytm Commercial Production',
+      stats: '4.8M Views · 3.2x CTR',
+      bgGradient: 'radial-gradient(circle at 40% 40%, #002e6e, #001538 80%)',
+      description: 'Dynamic commercial cuts, UI motion graphics, and high-impact kinetic typography for India’s leading payments giant.',
     },
   },
   {
     id: 'b2',
-    name: 'Ferro Mobility',
-    category: 'Clean EV Commuter',
-    stat: '1.4K Preorders',
-    avatar: 'FB',
+    name: 'Sri Mandir',
+    category: 'Devotional & Cultural App',
+    stat: '10M+ Devotees',
+    image: sriMandirLogo,
+    isLogoWithPadding: false,
     ring: 2,
-    angle: 60,
+    angle: 90,
     video: {
-      id: 'brand-ferro',
-      title: 'Ferro Bikes — Electric Flagship Launch Film',
-      category: 'Commercial Ad · 4K Color Grade',
+      id: 'brand-srimandir',
+      title: 'Sri Mandir — Puja Seva Cinematic Story',
+      category: 'Brand Film · Commercial Shoot',
       duration: '1:10',
-      creator: 'Ferro Mobility',
-      stats: '2.8M Views · 1.4K Preorders',
-      bgGradient: 'radial-gradient(circle at 60% 40%, #444444, #0f0f0f 85%)',
-      description: 'Full-scale on-location shoot, dynamic rolling car shots, and bass-synced electronic sound design.',
+      creator: 'Sri Mandir Puja Seva',
+      stats: '6.4M Views · Viral Reach',
+      bgGradient: 'radial-gradient(circle at 50% 50%, #d97706, #78350f 85%)',
+      description: 'Soulful cinematography, rich warm color tones, and heartfelt storytelling driving community trust and app installations.',
     },
   },
   {
     id: 'b3',
-    name: 'Baseline Coffee',
-    category: 'Specialty Roastery',
-    stat: '+180K Community',
-    avatar: 'BC',
+    name: 'Equal AI',
+    category: 'AI & Identity Infrastructure',
+    stat: 'Enterprise Tech',
+    image: equalAiLogo,
+    isLogoWithPadding: false,
     ring: 1,
     angle: 180,
     video: {
-      id: 'brand-baseline',
-      title: 'Baseline Coffee — Aesthetic Reel Engine',
-      category: 'Content Shoot · SMM',
-      duration: '0:30',
-      creator: 'Baseline Coffee Co.',
-      stats: '5.2M Total Reach · 6.8% Engagement',
-      bgGradient: 'radial-gradient(circle at 50% 50%, #3a3a3a, #121212 80%)',
-      description: 'A month of daily ASMR reels and lifestyle barista shoots resulting in a 400% surge in online bean subscriptions.',
+      id: 'brand-equalai',
+      title: 'Equal AI — Next-Gen Data & Identity Tech',
+      category: 'Tech Brand Film · 3D Motion UI',
+      duration: '0:35',
+      creator: 'Equal AI Infrastructure',
+      stats: '1.2M Reach · Enterprise B2B',
+      bgGradient: 'radial-gradient(circle at 40% 40%, #15803d, #052e16 80%)',
+      description: 'Precision motion UI, 3D data flows, and modern kinetic product explainers for high-converting B2B adoption.',
     },
   },
   {
     id: 'b4',
-    name: 'HyperDrive AI',
-    category: 'Enterprise SaaS',
-    stat: '0.6s Interactive',
-    avatar: 'HD',
+    name: 'Startt',
+    category: 'Creator Commerce Platform',
+    stat: 'Global Launch',
+    image: starttLogo,
+    isLogoWithPadding: false,
     ring: 2,
-    angle: 240,
+    angle: 270,
     video: {
-      id: 'brand-hyperdrive',
-      title: 'HyperDrive AI — Product Keynote & Motion UI',
-      category: 'Tech Brand Film · 3D',
-      duration: '1:45',
-      creator: 'HyperDrive Labs',
-      stats: '950K Tech Views',
-      bgGradient: 'radial-gradient(circle at 30% 60%, #303030, #0a0a0a 75%)',
-      description: 'Exploded UI node interactions, kinetic text animations, and investor-ready product keynote presentation.',
-    },
-  },
-  {
-    id: 'b5',
-    name: 'Nomad Gear',
-    category: 'Adventure Tech',
-    stat: '2.4M Views',
-    avatar: 'NG',
-    ring: 2,
-    angle: 310,
-    video: {
-      id: 'brand-nomad',
-      title: 'Nomad Gear — Indestructible Travel Ad',
-      category: 'Commercial Ad',
-      duration: '0:40',
-      creator: 'Nomad Gear',
-      stats: '2.4M Views · 18% CTR',
-      bgGradient: 'radial-gradient(circle at 50% 30%, #404040, #111111 80%)',
-      description: 'Extreme drop tests, desert dust storms, and macro zipper durability tests in high-speed 4K.',
+      id: 'brand-startt',
+      title: 'Startt — The Future of Digital Platforms',
+      category: 'Viral Launch Film · Kinetic Cut',
+      duration: '0:50',
+      creator: 'Startt Ecosystem',
+      stats: '2.1M Views · 14K Shares',
+      bgGradient: 'radial-gradient(circle at 50% 50%, #eab308, #1c1917 80%)',
+      description: 'Energetic camera ramping, punchy sound design, and vibrant visual effects tailored for tech-forward audiences.',
     },
   },
 ]
@@ -101,82 +101,82 @@ const BRANDS = [
 const CREATORS = [
   {
     id: 'c1',
-    name: 'Devansh Tech',
-    handle: '@devanshtech',
-    stats: '1.4M Subscribers',
-    category: 'Consumer Tech',
-    avatar: 'DT',
+    name: 'Raj Shamani',
+    handle: '@rajshamani',
+    stats: 'Figuring Out · 5M+ Subs',
+    category: 'Podcast & Business',
+    image: rajShamaniImg,
     ring: 1,
-    angle: 30,
+    angle: 0,
     video: {
-      id: 'creator-devansh',
-      title: 'Devansh Tech — Ultimate Flagship Smartphone Teardown',
-      category: 'YouTube Long-Form Edit',
-      duration: '12:40',
-      creator: 'Devansh Tech (1.4M Subs)',
-      stats: '1.2M Views · 68% Avg Retention',
-      bgGradient: 'radial-gradient(circle at 40% 40%, #383838, #111111 75%)',
-      description: 'Retention-engineered pacing with custom sound cues, kinetic 3D B-roll overlays, and color grade.',
+      id: 'creator-rajshamani',
+      title: 'Raj Shamani — Figuring Out Podcast Viral Cut',
+      category: 'High-Retention Podcast & Reel Edit',
+      duration: '1:00',
+      creator: 'Raj Shamani (5M+ Followers)',
+      stats: '8.4M Views · 240K Shares',
+      bgGradient: 'radial-gradient(circle at 50% 40%, #451a03, #09090b 80%)',
+      description: 'High-retention talking-head pacing, custom kinetic graphics, subtitle animations, and punchy audio mastering.',
     },
   },
   {
     id: 'c2',
-    name: 'Kavya Money',
-    handle: '@kavyagrows',
-    stats: '820K Followers',
-    category: 'Finance & Investing',
-    avatar: 'KM',
+    name: 'Thugesh',
+    handle: '@thugesh',
+    stats: '5.5M+ Subscribers',
+    category: 'Entertainment & Comedy',
+    image: thugeshImg,
     ring: 2,
-    angle: 110,
+    angle: 90,
     video: {
-      id: 'creator-kavya',
-      title: 'Kavya Money — 3 Tax Secrets the Rich Use',
-      category: 'Viral Finance Reel',
-      duration: '0:55',
-      creator: 'Kavya Money (820K Followers)',
-      stats: '4.8M Views · 140K Shares',
-      bgGradient: 'radial-gradient(circle at 50% 50%, #424242, #131313 80%)',
-      description: 'High-tempo talking head cut with animated infographics, pop-in charts, and sound design.',
+      id: 'creator-thugesh',
+      title: 'Thugesh — Viral Commentary & Sketch Reel',
+      category: 'Viral YouTube & Reel Edit',
+      duration: '0:45',
+      creator: 'Thugesh (5.5M+ Subs)',
+      stats: '6.2M Views · High Retention',
+      bgGradient: 'radial-gradient(circle at 50% 50%, #ca8a04, #1c1917 80%)',
+      description: 'Fast-paced comedic rhythm, sound effects library timing, dynamic zoom-cuts, and meme integration.',
     },
   },
   {
     id: 'c3',
-    name: 'The Fitness Protocol',
-    handle: '@fitnessprotocol',
-    stats: '650K Community',
-    category: 'Health & Athletics',
-    avatar: 'FP',
+    name: 'Dear Sir',
+    handle: '@dearsir',
+    stats: '17M+ Subscribers',
+    category: 'EdTech & Learning',
+    image: dearSirImg,
     ring: 1,
-    angle: 210,
+    angle: 180,
     video: {
-      id: 'creator-fitness',
-      title: 'The Fitness Protocol — 90-Day Full Physique Transformation',
-      category: 'Short-Form UGC & Edit',
-      duration: '0:45',
-      creator: 'The Fitness Protocol (650K Community)',
-      stats: '3.1M Views · 22K Saves',
-      bgGradient: 'radial-gradient(circle at 60% 30%, #333333, #0c0c0c 85%)',
-      description: 'Dynamic workout pacing, bass drops synced to reps, and kinetic motivational subtitles.',
+      id: 'creator-dearsir',
+      title: 'Dear Sir — India’s #1 Educational Concept Reel',
+      category: 'Visual Concept Edit & Hooks',
+      duration: '0:50',
+      creator: 'Dear Sir (17M+ Subs)',
+      stats: '12M+ Views · 500K Likes',
+      bgGradient: 'radial-gradient(circle at 40% 40%, #065f46, #022c22 80%)',
+      description: 'Engaging educational visual breakdown, whiteboard kinetic sync, and crystal clear retention hooks.',
     },
   },
   {
     id: 'c4',
-    name: 'Samar Explores',
-    handle: '@samarexplores',
-    stats: '2.1M Across Platforms',
-    category: 'Travel & Documentary',
-    avatar: 'SE',
+    name: 'Nakuul Mehta',
+    handle: '@nakuulmehta',
+    stats: '3M+ Across Platforms',
+    category: 'Actor & Lifestyle',
+    image: nakulMehtaImg,
     ring: 2,
-    angle: 290,
+    angle: 270,
     video: {
-      id: 'creator-samar',
-      title: 'Samar Explores — Hidden Valleys of Spiti (4K Drone Cut)',
-      category: '4K Cinematic Travel Cut',
-      duration: '2:15',
-      creator: 'Samar Explores (2.1M Community)',
-      stats: '2.4M Views · 4K 60FPS',
-      bgGradient: 'radial-gradient(circle at 30% 60%, #303030, #0a0a0a 75%)',
-      description: 'Ultra-wide cinematic drone color grade, ambient spatial wind soundscapes, and orchestral score timing.',
+      id: 'creator-nakulmehta',
+      title: 'Nakuul Mehta — Cinematic Poetry & Lifestyle Reel',
+      category: 'Cinematic Lifestyle & Ad',
+      duration: '1:15',
+      creator: 'Nakuul Mehta (3M+ Followers)',
+      stats: '3.8M Views · 8.2% Engagement',
+      bgGradient: 'radial-gradient(circle at 40% 40%, #1e1b4b, #09090b 80%)',
+      description: 'Poetic pacing, bespoke color grading, warm ambient score, and intimate cinematic portraiture.',
     },
   },
 ]
@@ -225,7 +225,7 @@ export default function Orbits({ onPlayVideo }) {
                 </h3>
               </div>
               <span className="text-[10px] sm:text-[11px] font-mono font-semibold text-[#52525b] bg-black/5 px-2.5 py-1 rounded-full border border-black/10 uppercase tracking-wider">
-                5 Client Partners
+                4 Client Partners
               </span>
             </div>
 
@@ -237,31 +237,28 @@ export default function Orbits({ onPlayVideo }) {
               onMouseEnter={() => setIsBrandsPaused(true)}
               onMouseLeave={() => setIsBrandsPaused(false)}
             >
-              {/* Center Core: Luxury Multi-Tone Metallic Disc */}
-              <button
-                onClick={() => onPlayVideo(BRANDS[0].video)}
-                className="relative z-20 w-20 h-20 sm:w-26 sm:h-26 md:w-28 md:h-28 rounded-full metallic-core text-white flex flex-col items-center justify-center text-center cursor-pointer group focus-ring transition-transform"
-                title="Play Featured Brand Reel"
+              {/* Center Core: Motion Labs Studio Core Logo */}
+              <div
+                className="relative z-20 w-22 h-22 sm:w-26 sm:h-26 md:w-28 md:h-28 rounded-full metallic-core text-white flex items-center justify-center p-3 sm:p-4 text-center shadow-2xl border border-white/20 select-none group"
               >
                 {/* Concentric subtle groove */}
-                <div className="absolute w-14 h-14 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full border border-white/20 pointer-events-none" />
-                <div className="absolute inset-0 rounded-full bg-white/10 animate-ping pointer-events-none" />
-                <span className="font-sans text-xs sm:text-sm md:text-base font-extrabold tracking-tight text-white leading-tight">
-                  BRANDS<br />ORBIT
-                </span>
-                <span className="text-[8px] sm:text-[9px] uppercase tracking-wider text-zinc-300 font-bold mt-1 group-hover:text-white transition-colors">
-                  Play ▶
-                </span>
-              </button>
+                <div className="absolute w-16 h-16 sm:w-20 sm:h-20 md:w-22 md:h-22 rounded-full border border-white/15 pointer-events-none" />
+                <div className="absolute inset-0 rounded-full bg-white/5 animate-pulse pointer-events-none" />
+
+                {/* Motion Labs Logo */}
+                <img
+                  src={logoWhite}
+                  alt="Motion Labs"
+                  className="w-16 sm:w-20 md:w-22 h-auto object-contain opacity-95 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 drop-shadow-[0_2px_8px_rgba(255,255,255,0.25)]"
+                />
+              </div>
 
               {/* Orbit Ring 1 (Inner Track - Fine Silver Dashed) */}
               <div className="absolute w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] md:w-[270px] md:h-[270px] rounded-full border border-dashed border-zinc-400/50 pointer-events-none animate-orbit-1">
-                {BRANDS.filter((b) => b.ring === 1).map((b, i) => (
+                {BRANDS.filter((b) => b.ring === 1).map((b) => (
                   <OrbitNode
                     key={b.id}
                     item={b}
-                    index={i}
-                    total={BRANDS.filter((item) => item.ring === 1).length}
                     counterClass="counter-orbit-1"
                     onClick={() => onPlayVideo(b.video)}
                   />
@@ -270,12 +267,10 @@ export default function Orbits({ onPlayVideo }) {
 
               {/* Orbit Ring 2 (Outer Track - Titanium Dashed) */}
               <div className="absolute w-[280px] h-[280px] sm:w-[370px] sm:h-[370px] md:w-[410px] md:h-[410px] rounded-full border border-dashed border-zinc-600/35 pointer-events-none animate-orbit-2">
-                {BRANDS.filter((b) => b.ring === 2).map((b, i) => (
+                {BRANDS.filter((b) => b.ring === 2).map((b) => (
                   <OrbitNode
                     key={b.id}
                     item={b}
-                    index={i}
-                    total={BRANDS.filter((item) => item.ring === 2).length}
                     counterClass="counter-orbit-2"
                     onClick={() => onPlayVideo(b.video)}
                   />
@@ -283,8 +278,32 @@ export default function Orbits({ onPlayVideo }) {
               </div>
             </div>
 
+            {/* All 4 Partner Logos Quick Row */}
+            <div className="w-full pt-3 mt-2 border-t border-black/8">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                {BRANDS.map((b) => (
+                  <button
+                    key={b.id}
+                    onClick={() => onPlayVideo(b.video)}
+                    className="flex items-center gap-2 p-1.5 rounded-xl hover:bg-black/5 transition-all cursor-pointer group text-left border border-transparent hover:border-black/10"
+                    title={`Play ${b.name} showcase`}
+                  >
+                    <img
+                      src={b.image}
+                      alt={b.name}
+                      className={`w-6 h-6 rounded-full object-cover border border-black/10 shrink-0 ${b.isLogoWithPadding ? 'object-contain p-0.5 bg-white' : ''}`}
+                    />
+                    <div className="min-w-0">
+                      <p className="text-xs font-bold text-[#09090b] truncate">{b.name}</p>
+                      <p className="text-[10px] text-[#71717a] truncate">{b.stat}</p>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+
             {/* Card Footer Status Indicator */}
-            <div className="w-full pt-3 flex items-center justify-between border-t border-black/8 text-[11px] text-[#71717a]">
+            <div className="w-full pt-3 mt-2 flex items-center justify-between border-t border-black/8 text-[11px] text-[#71717a]">
               <span className="font-medium flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#09090b]" />
                 {isBrandsPaused ? '⏸ Orbit Paused' : '⚡ Interactive Rotation'}
@@ -316,31 +335,28 @@ export default function Orbits({ onPlayVideo }) {
               onMouseEnter={() => setIsCreatorsPaused(true)}
               onMouseLeave={() => setIsCreatorsPaused(false)}
             >
-              {/* Center Core: Luxury Multi-Tone Metallic Disc */}
-              <button
-                onClick={() => onPlayVideo(CREATORS[0].video)}
-                className="relative z-20 w-20 h-20 sm:w-26 sm:h-26 md:w-28 md:h-28 rounded-full metallic-core text-white flex flex-col items-center justify-center text-center cursor-pointer group focus-ring transition-transform"
-                title="Watch Featured Creator Edit"
+              {/* Center Core: Motion Labs Studio Core Logo */}
+              <div
+                className="relative z-20 w-22 h-22 sm:w-26 sm:h-26 md:w-28 md:h-28 rounded-full metallic-core text-white flex items-center justify-center p-3 sm:p-4 text-center shadow-2xl border border-white/20 select-none group"
               >
                 {/* Concentric subtle groove */}
-                <div className="absolute w-14 h-14 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full border border-white/20 pointer-events-none" />
-                <div className="absolute inset-0 rounded-full bg-white/10 animate-ping pointer-events-none" />
-                <span className="font-sans text-xs sm:text-sm md:text-base font-extrabold tracking-tight text-white leading-tight">
-                  CREATOR<br />HUB
-                </span>
-                <span className="text-[8px] sm:text-[9px] uppercase tracking-wider text-zinc-300 font-bold mt-1 group-hover:text-white transition-colors">
-                  Watch ▶
-                </span>
-              </button>
+                <div className="absolute w-16 h-16 sm:w-20 sm:h-20 md:w-22 md:h-22 rounded-full border border-white/15 pointer-events-none" />
+                <div className="absolute inset-0 rounded-full bg-white/5 animate-pulse pointer-events-none" />
+
+                {/* Motion Labs Logo */}
+                <img
+                  src={logoWhite}
+                  alt="Motion Labs"
+                  className="w-16 sm:w-20 md:w-22 h-auto object-contain opacity-95 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 drop-shadow-[0_2px_8px_rgba(255,255,255,0.25)]"
+                />
+              </div>
 
               {/* Orbit Ring 1 (Inner Track - Fine Silver Dashed) */}
               <div className="absolute w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] md:w-[270px] md:h-[270px] rounded-full border border-dashed border-zinc-400/50 pointer-events-none animate-orbit-1">
-                {CREATORS.filter((c) => c.ring === 1).map((c, i) => (
+                {CREATORS.filter((c) => c.ring === 1).map((c) => (
                   <OrbitNode
                     key={c.id}
                     item={c}
-                    index={i}
-                    total={CREATORS.filter((item) => item.ring === 1).length}
                     counterClass="counter-orbit-1"
                     onClick={() => onPlayVideo(c.video)}
                   />
@@ -349,12 +365,10 @@ export default function Orbits({ onPlayVideo }) {
 
               {/* Orbit Ring 2 (Outer Track - Titanium Dashed) */}
               <div className="absolute w-[280px] h-[280px] sm:w-[370px] sm:h-[370px] md:w-[410px] md:h-[410px] rounded-full border border-dashed border-zinc-600/35 pointer-events-none animate-orbit-2">
-                {CREATORS.filter((c) => c.ring === 2).map((c, i) => (
+                {CREATORS.filter((c) => c.ring === 2).map((c) => (
                   <OrbitNode
                     key={c.id}
                     item={c}
-                    index={i}
-                    total={CREATORS.filter((item) => item.ring === 2).length}
                     counterClass="counter-orbit-2"
                     onClick={() => onPlayVideo(c.video)}
                   />
@@ -362,8 +376,32 @@ export default function Orbits({ onPlayVideo }) {
               </div>
             </div>
 
+            {/* All 4 Creator Avatars Quick Row */}
+            <div className="w-full pt-3 mt-2 border-t border-black/8">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                {CREATORS.map((c) => (
+                  <button
+                    key={c.id}
+                    onClick={() => onPlayVideo(c.video)}
+                    className="flex items-center gap-2 p-1.5 rounded-xl hover:bg-black/5 transition-all cursor-pointer group text-left border border-transparent hover:border-black/10"
+                    title={`Watch ${c.name} showcase`}
+                  >
+                    <img
+                      src={c.image}
+                      alt={c.name}
+                      className="w-6 h-6 rounded-full object-cover border border-black/10 shrink-0"
+                    />
+                    <div className="min-w-0">
+                      <p className="text-xs font-bold text-[#09090b] truncate">{c.name}</p>
+                      <p className="text-[10px] text-[#71717a] truncate">{c.stats.split('·')[0]}</p>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+
             {/* Card Footer Status Indicator */}
-            <div className="w-full pt-3 flex items-center justify-between border-t border-black/8 text-[11px] text-[#71717a]">
+            <div className="w-full pt-3 mt-2 flex items-center justify-between border-t border-black/8 text-[11px] text-[#71717a]">
               <span className="font-medium flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#09090b]" />
                 {isCreatorsPaused ? '⏸ Orbit Paused' : '⚡ Interactive Rotation'}
@@ -377,9 +415,8 @@ export default function Orbits({ onPlayVideo }) {
   )
 }
 
-function OrbitNode({ item, index, total, counterClass, onClick }) {
-  const angle = (360 / total) * index + (item.angle || 0)
-  const rad = (angle * Math.PI) / 180
+function OrbitNode({ item, counterClass, onClick }) {
+  const rad = ((item.angle || 0) * Math.PI) / 180
   const left = 50 + 50 * Math.cos(rad)
   const top = 50 + 50 * Math.sin(rad)
 
@@ -396,14 +433,22 @@ function OrbitNode({ item, index, total, counterClass, onClick }) {
       <div className={counterClass}>
         <button
           onClick={onClick}
-          className="relative group rounded-full transition-all duration-300 flex items-center justify-center focus-ring node-disc cursor-pointer w-9 h-9 sm:w-[46px] sm:h-[46px]"
+          className="relative group rounded-full transition-all duration-300 flex items-center justify-center focus-ring cursor-pointer w-11 h-11 sm:w-14 sm:h-14 bg-white border-2 border-white shadow-xl shadow-black/15 overflow-hidden hover:scale-115 hover:shadow-2xl hover:border-[#09090b]/80"
           title={`Click to open ${item.name}`}
         >
-          <span className="text-xs font-bold leading-none text-white tracking-tight">{item.avatar}</span>
+          <img
+            src={item.image}
+            alt={item.name}
+            className={`w-full h-full object-cover rounded-full transition-transform duration-300 group-hover:scale-105 ${
+              item.isLogoWithPadding ? 'p-1.5 object-contain bg-white' : ''
+            }`}
+          />
 
           {/* Tooltip on Hover */}
-          <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#09090b] border border-white/20 text-white text-[10px] font-semibold px-2.5 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-2xl flex items-center gap-1 z-30">
-            <span>▶ {item.name}</span>
+          <div className="absolute -bottom-9 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#09090b] border border-white/20 text-white text-[10px] font-semibold px-2.5 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-2xl flex items-center gap-1.5 z-30">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+            <span>{item.name}</span>
+            <span className="text-neutral-400 font-normal">· {item.category || item.stats}</span>
           </div>
         </button>
       </div>

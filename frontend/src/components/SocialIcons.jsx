@@ -28,23 +28,23 @@ export function LinkedInIcon({ className = 'w-4 h-4' }) {
 export const SOCIAL_LINKS = [
   {
     name: 'Instagram',
-    href: 'https://instagram.com/motionlabs',
+    href: 'https://www.instagram.com/motionlabs.work/?hl=en',
     icon: InstagramIcon,
-    handle: '@motionlabs.studio',
+    handle: '@motionlabs.work',
     badge: 'Daily Edits',
   },
   {
     name: 'WhatsApp',
-    href: 'https://wa.me/919999999999?text=Hi%20Motion%20Labs%2C%20I%20would%20like%20to%20discuss%20a%20project.',
+    href: 'https://wa.me/919310106145?text=Hi%20Motion%20Labs%2C%20I%20would%20like%20to%20discuss%20a%20project.',
     icon: WhatsAppIcon,
-    handle: '+91 99999 99999',
+    handle: '+91 93101 06145',
     badge: 'Quick Chat',
   },
   {
     name: 'LinkedIn',
-    href: 'https://linkedin.com/company/motionlabs',
+    href: 'https://www.linkedin.com/in/motion-labs-26623b418/',
     icon: LinkedInIcon,
-    handle: 'Motion Labs Studio',
+    handle: 'Motion Labs',
     badge: 'Agency Network',
   },
 ]

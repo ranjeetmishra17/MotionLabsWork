@@ -1,26 +1,25 @@
 import { motion } from 'framer-motion'
 import LiquidBlob from './LiquidBlob'
 import heroBg from '../assets/hero-bg.png'
-import heroBgMobile from '../assets/hero-bg-mobile.png'
+import rajShamaniImg from '../assets/creator-logos/Raj Shamni.webp'
+import paytmLogo from '../assets/brand-logos/Paytm.webp'
+import thugeshImg from '../assets/creator-logos/Thugesh.webp'
+import equalAiLogo from '../assets/brand-logos/Equal AI.webp'
 
 export default function Hero({ onOpenShowreel }) {
   return (
     <section id="top" className="relative pt-28 pb-16 sm:pt-36 sm:pb-24 md:pt-44 md:pb-32 overflow-hidden bg-[#fafafb]">
-      {/* Cinematic Studio Photography Background Layer (Responsive Mobile & Desktop) */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
-        <picture className="w-full h-full">
-          <source media="(max-width: 767px)" srcSet={heroBgMobile} />
-          <source media="(min-width: 768px)" srcSet={heroBg} />
-          <img
-            src={heroBg}
-            alt="Motion Labs Cinematic Studio"
-            className="w-full h-full object-cover object-center opacity-80 filter contrast-[1.05] brightness-[0.95]"
-            loading="eager"
-            fetchPriority="high"
-          />
-        </picture>
+      {/* Cinematic Studio Photography Background Layer (Desktop Only, Removed on Mobile) */}
+      <div className="hidden md:block absolute inset-0 pointer-events-none overflow-hidden select-none">
+        <img
+          src={heroBg}
+          alt="Motion Labs Cinematic Studio"
+          className="w-full h-full object-cover object-center opacity-80 filter contrast-[1.05] brightness-[0.95]"
+          loading="eager"
+          fetchPriority="high"
+        />
         {/* Delicate Scrim for Balanced Depth */}
-        <div className="absolute inset-0 bg-black/6 sm:bg-black/8" />
+        <div className="absolute inset-0 bg-black/8" />
 
         {/* Soft Center Feathering for Clean Light Balance */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_50%_45%,rgba(250,250,251,0.60)_0%,rgba(250,250,251,0.25)_65%,transparent_100%)]" />
@@ -102,20 +101,32 @@ export default function Hero({ onOpenShowreel }) {
           transition={{ duration: 0.45, delay: 0.2 }}
           className="mt-8 sm:mt-12 flex flex-wrap items-center justify-center gap-2.5 sm:gap-6 py-2 sm:py-2.5 px-3.5 sm:px-6 rounded-full liquid-glass-pill max-w-md mx-auto relative z-10"
         >
-          {/* Overlapping client badge avatars in luxury monochrome shades */}
+          {/* Overlapping client & creator badge avatars */}
           <div className="flex items-center -space-x-2">
-            <span className="w-6 h-6 rounded-full bg-gradient-to-br from-neutral-800 to-black text-white text-[9px] font-bold flex items-center justify-center border-2 border-white shadow-sm">
-              NS
-            </span>
-            <span className="w-6 h-6 rounded-full bg-gradient-to-br from-neutral-700 to-neutral-900 text-white text-[9px] font-bold flex items-center justify-center border-2 border-white shadow-sm">
-              FB
-            </span>
-            <span className="w-6 h-6 rounded-full bg-gradient-to-br from-neutral-600 to-neutral-800 text-white text-[9px] font-bold flex items-center justify-center border-2 border-white shadow-sm">
-              BC
-            </span>
-            <span className="w-6 h-6 rounded-full bg-gradient-to-br from-neutral-800 to-neutral-950 text-white text-[9px] font-bold flex items-center justify-center border-2 border-white shadow-sm">
-              DT
-            </span>
+            <img
+              src={rajShamaniImg}
+              alt="Raj Shamani"
+              className="w-7 h-7 rounded-full object-cover border-2 border-white shadow-sm"
+              title="Raj Shamani"
+            />
+            <img
+              src={paytmLogo}
+              alt="Paytm"
+              className="w-7 h-7 rounded-full object-contain p-0.5 bg-white border-2 border-white shadow-sm"
+              title="Paytm"
+            />
+            <img
+              src={thugeshImg}
+              alt="Thugesh"
+              className="w-7 h-7 rounded-full object-cover border-2 border-white shadow-sm"
+              title="Thugesh"
+            />
+            <img
+              src={equalAiLogo}
+              alt="Equal AI"
+              className="w-7 h-7 rounded-full object-cover border-2 border-white shadow-sm"
+              title="Equal AI"
+            />
           </div>
 
           <div className="flex items-center gap-2 text-xs font-semibold text-[#09090b]">

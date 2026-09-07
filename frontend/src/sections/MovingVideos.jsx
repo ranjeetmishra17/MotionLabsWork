@@ -1,5 +1,12 @@
 import { useState } from 'react'
 
+// =======================================================================
+// MOTION LABS — REELS & VIDEO SHOWCASE
+// To attach a YouTube video or Short, simply add its 11-character ID to `youtubeId`.
+// Example: youtubeId: 'dQw4w9WgXcQ' (or paste full YouTube Shorts/video URL)
+// The thumbnail will be fetched automatically from YouTube!
+// =======================================================================
+
 const COLUMN_ONE = [
   {
     id: 'v1',
@@ -8,6 +15,7 @@ const COLUMN_ONE = [
     stats: '4.8M Views',
     duration: '0:28',
     creator: 'Apex Athletics',
+    youtubeId: '', // Paste YouTube ID or Shorts link here
     bgGradient: 'radial-gradient(circle at 30% 30%, #52525b 0%, #27272a 40%, #09090b 85%)',
     description: 'High-octane commercial reel with punchy speed ramping, sound design, and custom kinetic typography.',
   },
@@ -18,6 +26,7 @@ const COLUMN_ONE = [
     stats: '3.4M Views',
     duration: '0:32',
     creator: 'Velvet Skin',
+    youtubeId: '',
     bgGradient: 'radial-gradient(circle at 60% 40%, #71717a 0%, #3f3f46 45%, #18181b 90%)',
     description: 'Macro product cinematography with satisfying ASMR textures for 4.2x ROAS on Instagram Reels.',
   },
@@ -28,6 +37,7 @@ const COLUMN_ONE = [
     stats: '1.9M Views',
     duration: '0:45',
     creator: 'HyperDrive Labs',
+    youtubeId: '',
     bgGradient: 'radial-gradient(circle at 40% 60%, #3f3f46 0%, #1c1c20 50%, #050507 85%)',
     description: 'Sleek UI interaction recording with dynamic camera tracking and custom spatial audio.',
   },
@@ -38,6 +48,7 @@ const COLUMN_ONE = [
     stats: '5.2M Views',
     duration: '0:22',
     creator: 'Coffee Culture',
+    youtubeId: '',
     bgGradient: 'radial-gradient(circle at 50% 35%, #585862 0%, #29292e 50%, #0f0f11 85%)',
     description: 'Crisp coffee bean grinding soundscapes and cinematic slow-motion pour shots.',
   },
@@ -51,6 +62,7 @@ const COLUMN_TWO = [
     stats: '2.1M Views',
     duration: '0:50',
     creator: 'Tanmay & Co.',
+    youtubeId: '',
     bgGradient: 'radial-gradient(circle at 70% 30%, #3a3a40 0%, #1f1f23 50%, #09090b 90%)',
     description: 'Engaging talking-head cut with custom kinetic chart popups and retention-optimized pacing.',
   },
@@ -61,6 +73,7 @@ const COLUMN_TWO = [
     stats: '2.9M Views',
     duration: '0:35',
     creator: 'Kinetix Club',
+    youtubeId: '',
     bgGradient: 'radial-gradient(circle at 30% 70%, #63636e 0%, #323238 50%, #121214 90%)',
     description: 'Rapid-fire testimonial pacing with on-screen animated captions and motivational sound design.',
   },
@@ -71,6 +84,7 @@ const COLUMN_TWO = [
     stats: '1.7M Views',
     duration: '0:40',
     creator: 'Nomad Gear',
+    youtubeId: '',
     bgGradient: 'radial-gradient(circle at 65% 45%, #4a4a52 0%, #252529 50%, #0c0c0e 85%)',
     description: 'Outdoor rugged drop test footage combined with clean studio lighting.',
   },
@@ -81,6 +95,7 @@ const COLUMN_TWO = [
     stats: '3.1M Views',
     duration: '0:30',
     creator: 'Aura Audio',
+    youtubeId: '',
     bgGradient: 'radial-gradient(circle at 45% 45%, #52525b 0%, #202024 50%, #08080a 80%)',
     description: '3D exploded headphone render with bass soundwave visualization.',
   },
@@ -94,6 +109,7 @@ const COLUMN_THREE = [
     stats: '2.4M Views',
     duration: '0:45',
     creator: 'Solstice Festival',
+    youtubeId: '',
     bgGradient: 'radial-gradient(circle at 60% 40%, #60606b 0%, #2b2b30 50%, #0e0e10 85%)',
     description: 'Bass-synced rhythmic cuts, crowd energy, and saturated night color grade.',
   },
@@ -104,6 +120,7 @@ const COLUMN_THREE = [
     stats: '1.5M Views',
     duration: '0:55',
     creator: 'Venture Voices',
+    youtubeId: '',
     bgGradient: 'radial-gradient(circle at 50% 50%, #44444c 0%, #1c1c20 50%, #09090b 85%)',
     description: 'Dramatic opening transitioning into refined monochromatic brand climax.',
   },
@@ -114,6 +131,7 @@ const COLUMN_THREE = [
     stats: '3.8M Views',
     duration: '0:25',
     creator: 'Glow Labs',
+    youtubeId: '',
     bgGradient: 'radial-gradient(circle at 35% 55%, #55555f 0%, #26262a 50%, #101012 80%)',
     description: 'Dewy water droplet ripples and smooth macro lens panning across packaging.',
   },
@@ -124,6 +142,7 @@ const COLUMN_THREE = [
     stats: '4.1M Views',
     duration: '0:38',
     creator: 'Shift Performance',
+    youtubeId: '',
     bgGradient: 'radial-gradient(circle at 65% 35%, #6e6e7a 0%, #303036 50%, #0d0d0f 85%)',
     description: 'Dynamic tire smoke zooms and roaring engine audio master tracks.',
   },
@@ -247,11 +266,23 @@ function VerticalVideoCard({ video, onSelect }) {
       onMouseLeave={() => setIsHovered(false)}
       className="w-full aspect-[9/14] bg-[#09090b] rounded-2xl overflow-hidden border border-black/15 shadow-xl hover:shadow-2xl hover:border-white/60 transition-all duration-300 cursor-pointer group relative flex flex-col justify-between p-5 mb-6"
     >
-      {/* Background Multi-Tonal Gradient */}
-      <div
-        className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
-        style={{ background: video.bgGradient }}
-      />
+      {/* Background Poster Thumbnail (Custom or YouTube HQ Default) or Gradient Fallback */}
+      {video.thumbnail || video.youtubeId ? (
+        <img
+          src={
+            video.thumbnail ||
+            `https://img.youtube.com/vi/${video.youtubeId.replace(/.*(?:shorts\/|v=)([\w-]{11}).*/, '$1')}/hqdefault.jpg`
+          }
+          alt={video.title}
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+      ) : (
+        <div
+          className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
+          style={{ background: video.bgGradient }}
+        />
+      )}
 
       {/* Luxury Specular Gloss Sheen */}
       <div className="specular-gloss" />

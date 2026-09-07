@@ -1,50 +1,59 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
+import rajShamaniImg from '../assets/creator-logos/Raj Shamni.webp'
+import paytmLogo from '../assets/brand-logos/Paytm.webp'
+import thugeshImg from '../assets/creator-logos/Thugesh.webp'
+import sriMandirLogo from '../assets/brand-logos/Sri Mandir.webp'
+
 const REVIEWS = [
   {
     id: 'r1',
     quote:
-      'We used to wait two weeks for a single edit. Motion Labs turns around a full week of high-retention Reels before our next shoot is even scheduled. Our customer acquisition cost dropped 38% within 60 days.',
-    name: 'Aarav Sharma',
-    role: 'Founder & CEO',
-    company: 'Nocturne Skincare',
-    stat: '4.2x ROAS Surge',
-    tag: 'D2C Skincare',
-    avatar: 'AS',
+      'Motion Labs turns around high-retention video cuts at lightning speed. The pacing, audio cues, and custom kinetic subtitles are dialed in so well that our retention and viral reach surged immediately.',
+    name: 'Raj Shamani',
+    role: 'Creator & Host',
+    company: 'Figuring Out Podcast',
+    stat: '8.4M Views Surge',
+    tag: 'Podcast & Content',
+    avatar: rajShamaniImg,
+    isLogo: false,
   },
   {
     id: 'r2',
     quote:
-      'The launch film Motion Labs produced for our electric bike was pure cinema. It set our pre-order record within the first 48 hours of posting and converted cold traffic effortlessly.',
-    name: 'Priya Mehta',
-    role: 'VP Marketing',
-    company: 'Ferro Mobility',
-    stat: '2.8M Launch Views',
-    tag: 'Clean EV Brand',
-    avatar: 'PM',
+      'The commercial films and digital creative assets Motion Labs produced elevated our fintech campaigns with incredible polish, slick UI motion, and high conversion.',
+    name: 'Marketing Team',
+    role: 'Growth & Brand',
+    company: 'Paytm',
+    stat: '4.8M Commercial Views',
+    tag: 'Fintech Commercial',
+    avatar: paytmLogo,
+    isLogo: true,
   },
   {
     id: 'r3',
     quote:
-      'They rebuilt our entire social content engine. The visual aesthetic is immaculate, retention is consistently above 70%, and our Instagram engagement rate jumped from 1.2% to 6.8%.',
-    name: 'Rohan Gupta',
-    role: 'Head of Growth',
-    company: 'Baseline Coffee Co.',
-    stat: '+180K Community',
-    tag: 'Specialty Beverage',
-    avatar: 'RG',
+      'They understand creator comedic rhythm and viral retention like nobody else. Every edit feels fresh, kinetic, and packed with personality.',
+    name: 'Thugesh',
+    role: 'Creator & Founder',
+    company: 'Thugesh (5.5M+)',
+    stat: '6.2M Reach',
+    tag: 'Entertainment & UGC',
+    avatar: thugeshImg,
+    isLogo: false,
   },
   {
     id: 'r4',
     quote:
-      'Motion Labs rebuilt our site in three weeks with zero page-builder bloat. It finally loads as fast as it looks and our inbound enterprise conversion rate doubled.',
-    name: 'Elena Rostova',
-    role: 'Creative Director',
-    company: 'Harlow Studio',
-    stat: '99 Google PageSpeed',
-    tag: 'Flagship Web',
-    avatar: 'ER',
+      'Our devotional Puja Seva films required deep cultural authenticity combined with modern cinematic color grading. Motion Labs delivered beyond expectations.',
+    name: 'Devotional Growth',
+    role: 'Product Lead',
+    company: 'Sri Mandir App',
+    stat: '10M+ Devotees',
+    tag: 'Culture & Devotion',
+    avatar: sriMandirLogo,
+    isLogo: false,
   },
 ]
 
@@ -103,8 +112,12 @@ export default function Testimonials() {
 
               <div className="flex items-center justify-between gap-4 border-t border-black/8 pt-6">
                 <div className="flex items-center gap-3.5">
-                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#27272a] to-[#09090b] text-white font-bold text-sm flex items-center justify-center shadow-md border border-white/20">
-                    {REVIEWS[activeIndex].avatar}
+                  <div className="w-12 h-12 rounded-xl bg-white text-white font-bold text-sm flex items-center justify-center shadow-md border border-black/10 overflow-hidden shrink-0">
+                    <img
+                      src={REVIEWS[activeIndex].avatar}
+                      alt={REVIEWS[activeIndex].name}
+                      className={`w-full h-full object-cover ${REVIEWS[activeIndex].isLogo ? 'object-contain p-1.5 bg-white' : ''}`}
+                    />
                   </div>
                   <div>
                     <h3 className="font-sans font-bold text-[#09090b] text-base">
@@ -149,7 +162,14 @@ export default function Testimonials() {
               }`}
             >
               <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-bold text-[#09090b]">{r.name}</span>
+                <div className="flex items-center gap-2">
+                  <img
+                    src={r.avatar}
+                    alt={r.name}
+                    className={`w-5 h-5 rounded-full object-cover border border-black/10 shrink-0 ${r.isLogo ? 'object-contain bg-white p-0.5' : ''}`}
+                  />
+                  <span className="text-xs font-bold text-[#09090b]">{r.name}</span>
+                </div>
                 <span className="text-[10px] text-[#09090b] font-bold">{r.stat}</span>
               </div>
               <p className="text-xs text-[#71717a] line-clamp-2">

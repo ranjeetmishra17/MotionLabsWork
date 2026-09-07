@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import logoImg from '../assets/Black Without BG.png'
 
 const LINKS = [
   { label: 'Portfolio', href: '#portfolio' },
@@ -27,18 +28,12 @@ export default function Navbar() {
     >
       <nav className="container flex items-center justify-between">
         {/* Brand Logo */}
-        <a href="#top" className="flex items-center gap-2.5 group focus-ring">
-          <div className="w-8 h-8 rounded-xl bg-[#09090b] text-white flex items-center justify-center font-bold text-sm shadow-md border border-black/20 group-hover:border-black transition-all">
-            <span className="text-white transition-colors">M</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="display text-lg font-bold tracking-tight text-[#09090b] leading-none">
-              Motion Labs
-            </span>
-            <span className="text-[10px] uppercase font-semibold text-[#71717a] tracking-widest mt-0.5">
-              Production Studio
-            </span>
-          </div>
+        <a href="#top" className="flex items-center group focus-ring">
+          <img
+            src={logoImg}
+            alt="Motion Labs"
+            className="h-7.5 sm:h-8 md:h-9 w-auto object-contain transition-transform group-hover:scale-[1.03] duration-200"
+          />
         </a>
 
         {/* Desktop & Tablet Links */}
