@@ -396,3 +396,83 @@ a {
 button, a {
   -webkit-tap-highlight-color: transparent;
 }
+
+/* World Map Cinematic Animation Suite */
+@keyframes arc-pulse-flow {
+  0% {
+    stroke-dashoffset: 280;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.arc-pulse-flow {
+  animation: arc-pulse-flow 2.6s linear infinite;
+}
+
+@keyframes map-sonar {
+  0% {
+    r: 4px;
+    opacity: 0.85;
+    stroke-width: 2px;
+  }
+  50% {
+    opacity: 0.45;
+  }
+  100% {
+    r: 32px;
+    opacity: 0;
+    stroke-width: 0.5px;
+  }
+}
+
+.sonar-wave-1 {
+  animation: map-sonar 2.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  transform-origin: center;
+}
+
+.sonar-wave-2 {
+  animation: map-sonar 2.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite 0.85s;
+  transform-origin: center;
+}
+
+.sonar-wave-3 {
+  animation: map-sonar 2.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite 1.7s;
+  transform-origin: center;
+}
+
+@keyframes country-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 1px rgba(9, 9, 11, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 8px rgba(9, 9, 11, 0.7));
+  }
+}
+
+.country-glow-pulse {
+  animation: country-glow 3.5s ease-in-out infinite;
+}
+
+@keyframes hud-scanline {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(220%);
+    opacity: 0;
+  }
+}
+
+.hud-scanline-effect {
+  animation: hud-scanline 6s ease-in-out infinite;
+}
+

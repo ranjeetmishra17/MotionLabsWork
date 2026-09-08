@@ -76,21 +76,22 @@ export default function App() {
         onClose={() => setActiveVideo(null)}
       />
 
-      {/* Floating Liquid Glass WhatsApp Studio Desk */}
+      {/* Floating Studio WhatsApp Button in Shades of Black */}
       <a
         href="https://wa.me/919310106145?text=Hi%20Motion%20Labs%2C%20I%20would%20like%20to%20discuss%20a%20project."
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-40 liquid-glass-pill py-2.5 px-4 rounded-full flex items-center gap-2.5 shadow-2xl hover:scale-105 active:scale-95 transition-all text-xs font-semibold text-[#09090b] hover:text-black border border-black/10 group"
+        className="fixed bottom-6 right-6 z-40 bg-gradient-to-b from-[#27272a] via-[#18181b] to-[#09090b] py-2.5 px-4 rounded-full flex items-center gap-2.5 shadow-2xl hover:scale-105 active:scale-95 transition-all text-xs font-semibold text-white hover:text-white border border-white/15 hover:border-[#25D366]/50 group"
         aria-label="Chat with Motion Labs on WhatsApp (+91 93101 06145)"
         title="WhatsApp: +91 93101 06145"
+        style={{ color: '#ffffff' }}
       >
         <span className="relative flex h-2.5 w-2.5">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#09090b] opacity-75" />
-          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#09090b]" />
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75" />
+          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#25D366]" />
         </span>
-        <WhatsAppIcon className="w-4 h-4 text-[#09090b] group-hover:scale-110 transition-transform" />
-        <span className="hidden sm:inline font-bold">Studio WhatsApp</span>
+        <WhatsAppIcon className="w-4 h-4 text-[#25D366] group-hover:scale-110 transition-transform" />
+        <span className="hidden sm:inline font-bold text-white" style={{ color: '#ffffff' }}>Studio WhatsApp</span>
       </a>
     </div>
   )
