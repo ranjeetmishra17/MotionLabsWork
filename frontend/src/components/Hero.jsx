@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import LiquidBlob from './LiquidBlob'
-import heroBg from '../assets/hero-bg.png'
+import heroBg from '../assets/hero-bg.webp'
 import rajShamaniImg from '../assets/creator-logos/Raj Shamni.webp'
 import paytmLogo from '../assets/brand-logos/Paytm.webp'
 import thugeshImg from '../assets/creator-logos/Thugesh.webp'
@@ -83,15 +83,15 @@ export default function Hero({ onOpenShowreel }) {
           >
             Start a Project →
           </a>
-          <button
-            onClick={onOpenShowreel}
-            className="liquid-btn-secondary py-3.5 px-6 sm:py-4 sm:px-7 text-sm sm:text-base font-semibold focus-ring group flex items-center justify-center gap-2.5"
+          <a
+            href="#videos"
+            className="liquid-btn-secondary py-3.5 px-6 sm:py-4 sm:px-7 text-sm sm:text-base font-semibold focus-ring group flex items-center justify-center gap-2.5 text-center cursor-pointer"
           >
             <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#09090b] text-white text-[10px] sm:text-xs flex items-center justify-center border border-white/20 group-hover:bg-black group-hover:scale-110 transition-all shadow-md">
               ▶
             </span>
-            <span>Watch 2026 Showreel</span>
-          </button>
+            <span>Watch Videos</span>
+          </a>
         </motion.div>
 
         {/* Mobile-First Social Proof & Studio Teaser Bar */}

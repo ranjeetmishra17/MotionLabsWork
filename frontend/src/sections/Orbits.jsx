@@ -34,6 +34,8 @@ const BRANDS = [
       stats: '4.8M Views · 3.2x CTR',
       bgGradient: 'radial-gradient(circle at 40% 40%, #002e6e, #001538 80%)',
       description: 'Dynamic commercial cuts, UI motion graphics, and high-impact kinetic typography for India’s leading payments giant.',
+      youtubeId: 's9Cd5B26YAI',
+      youtubeUrl: 'https://youtu.be/s9Cd5B26YAI',
     },
   },
   {
@@ -54,6 +56,8 @@ const BRANDS = [
       stats: '6.4M Views · Viral Reach',
       bgGradient: 'radial-gradient(circle at 50% 50%, #d97706, #78350f 85%)',
       description: 'Soulful cinematography, rich warm color tones, and heartfelt storytelling driving community trust and app installations.',
+      youtubeId: '01kToO4pOLo',
+      youtubeUrl: 'https://youtube.com/shorts/01kToO4pOLo',
     },
   },
   {
@@ -74,6 +78,8 @@ const BRANDS = [
       stats: '1.2M Reach · Enterprise B2B',
       bgGradient: 'radial-gradient(circle at 40% 40%, #15803d, #052e16 80%)',
       description: 'Precision motion UI, 3D data flows, and modern kinetic product explainers for high-converting B2B adoption.',
+      vimeoId: '1213040467',
+      vimeoUrl: 'https://vimeo.com/1213040467',
     },
   },
   {
@@ -94,6 +100,8 @@ const BRANDS = [
       stats: '2.1M Views · 14K Shares',
       bgGradient: 'radial-gradient(circle at 50% 50%, #eab308, #1c1917 80%)',
       description: 'Energetic camera ramping, punchy sound design, and vibrant visual effects tailored for tech-forward audiences.',
+      youtubeId: 'MkIwrv9Y8PI',
+      youtubeUrl: 'https://youtu.be/MkIwrv9Y8PI',
     },
   },
 ]

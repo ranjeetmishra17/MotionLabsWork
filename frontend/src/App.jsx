@@ -20,14 +20,15 @@ export default function App() {
       id: 'showreel-2026',
       title: 'Motion Labs — Official 2026 Studio Reel',
       category: 'Commercial & Viral Showreel',
-      duration: '01:15',
+      duration: '02:15',
       creator: 'Motion Labs Production',
       stats: '150+ Projects Across 2025–2026',
       isVertical: false, // 16:9 widescreen showcase
-      youtubeId: '', // Paste your YouTube showreel ID here (e.g. 'dQw4w9WgXcQ')
+      youtubeId: 'XF8dmDYwsgE',
+      youtubeUrl: 'https://youtu.be/XF8dmDYwsgE',
       bgGradient: 'radial-gradient(circle at 40% 40%, #383838, #0e0e0e 80%)',
       description:
-        'A comprehensive showcase of high-retention video edits, commercial shoots, 3D product animations, and brand launches produced by Motion Labs.',
+        'A comprehensive showcase of high-retention video edits, commercial shoots, festival productions, and brand launches produced by Motion Labs.',
     })
   }
 
