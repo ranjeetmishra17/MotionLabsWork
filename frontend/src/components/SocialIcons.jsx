@@ -65,7 +65,7 @@ export const SOCIAL_LINKS = [
   },
   {
     name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/motion-labs-26623b418/',
+    href: 'https://www.linkedin.com/in/motion-labs-993122437',
     icon: LinkedInIcon,
     handle: 'Motion Labs',
     badge: 'Agency Network',

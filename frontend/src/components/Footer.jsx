@@ -75,7 +75,7 @@ export default function Footer() {
 
             {/* LinkedIn: Highlighted with Official Blue */}
             <a
-              href="https://www.linkedin.com/in/motion-labs-26623b418/"
+              href="https://www.linkedin.com/in/motion-labs-993122437"
               target="_blank"
               rel="noopener noreferrer"
               className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#0A66C2]/10 hover:bg-[#0A66C2] border border-[#0A66C2]/30 hover:border-[#0A66C2] flex items-center justify-center hover:scale-110 active:scale-95 transition-all shadow-md focus-ring group"

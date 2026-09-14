@@ -98,7 +98,7 @@ export default function Contact() {
 
               {/* LinkedIn: Blue Logo Icon, Neutral Text */}
               <a
-                href="https://www.linkedin.com/in/motion-labs-26623b418/"
+                href="https://www.linkedin.com/in/motion-labs-993122437"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="liquid-glass-pill p-3.5 rounded-2xl flex items-center justify-between gap-3 group cursor-pointer hover:border-black/30 transition-all"
